@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Game</title>
+</head>
+
+<body>
+    <!-------game-status-info-section------->
+    <div class="game_info_section row">
+        <div class="score col-6 ">
+            <h3>Your Score: 000</h3>
+        </div>
+        <div class="col-6">
+        <button type="button" class="btn hide-button" id="modal-btn" data-toggle="modal"
+                data-target="#modal-option">Difficulty Options</button>
+                </div>
+
+        <div class="modal row" id="modal-option" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <ul class="diff-lvl col-12">
+                            <h3>Chose your difficulty</h3>
+                            <li>
+                                <input type="radio" id="DOption1" name="difficulty" value="3">
+                                <label for="DOption1">Monday</label>
+                            </li>
+
+                            <li>
+                                <input type="radio" id="DOption2" name="difficulty" value="2" checked>
+                                <label for="DOption2">Wednesday</label>
+                            </li>
+
+                            <li>
+                                <input type="radio" id="DOption3" name="difficulty" value="1">
+                                <label for="DOption3">Saturday</label>
+                            </li>
+
+                            <li>
+                                <input type="radio" id="DOption4" name="difficulty" value="0.5">
+                                <label for="DOption4">Sunday Morning</label>
+                            </li>
+                        </ul>
+                        <button type="button" class="close startbtn" data-dismiss="modal"
+                            aria-label=""><span>Bake</span></button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="row container-fluid">
+            <div class="col-3">
+                <img src="assets/img/costumer_bread.png" alt="costumer cartoon" class="img-fluid">
+            </div>
+            <div class="game_area col-6">
+                <div class="row ">
+                    <div class="cinnimon-roll col-6">
+                        <div class="game-btn">
+                            <img src="assets/img/cinemon-roll.png" alt="Cinemon roll" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class=" bread col-6">
+                        <div class="game-btn">
+                            <img src="assets/img/bread_roll.png" alt="bread roll" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" pain-au-chocolat col-6">
+                        <div class="game-btn">
+                            <img src="assets/img/pain-au-chocolat.png" alt="pain au chocolat" class=" img-fluid">
+                        </div>
+                    </div>
+                    <div class="fairy-cake col-6">
+                        <div class="game-btn">
+                            <img src="assets/img/fairy-cake.png" alt="fairy cake" class=" img-fluid">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row box">
+            <div class="col-6"></div>
+             <div class="startbtn ">
+            <button class="btn hide-button start-game col-6" onclick="play()">Start Taking Orders!</button>
+        </div>
+          
+        </div>
+    </div>
+     <script src="assets/js/script.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

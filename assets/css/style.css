@@ -1,0 +1,112 @@
+body, html {
+    background-color: rgb(212, 113, 19);
+    color: burlywood;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.diff-lvl h3{
+    color: teal;
+}
+
+.diff-lvl{
+    font-size: 30px;
+     list-style: none;
+     text-align: center;
+     padding: 10px;
+     margin: auto;
+}
+#modal-btn{
+    color: rgb(211, 108, 11);
+    background-color: burlywood;
+    text-align: center;
+    padding: 7px 20px 7px 20px;
+  
+
+}
+#modal-btn:hover{
+    color: rgb(212, 146, 85);
+    background-color: rgb(70, 51, 28);
+}
+
+.game_info_section{
+       
+    text-align: center;
+    margin: auto;
+    display: inline block;
+}
+.score h3{
+    padding: 20px;
+    font-size: 40px;
+}
+ .start-game{
+     color: rgb(155, 88, 0);
+    background-color: burlywood;
+     font-size: 30px;
+   padding: 7px 20px 7px 20px;
+   margin-bottom: 10px;
+ }
+  .start-game:hover{
+     color: rgb(192, 149, 93);
+    background-color: rgb(6, 34, 34);
+    cursor: pointer;
+ }
+
+.game-area{
+    padding: 10px;
+}
+/*_____Game_buttons______*/
+.col-6{
+    margin: auto;
+    padding: 10px;
+}
+
+.cinnimon-roll {
+    position: relative;
+    width: 160px;
+    height: 160px;
+   
+}
+
+.bread {
+    position: relative;
+     width: 160px;
+    height: 160px;
+  
+}
+
+.pain-au-chocolat{
+    position: relative;
+     width: 160px;
+    height: 160px;
+}
+.fairy-cake {
+position: relative;
+     width: 160px;
+    height: 160px;
+}
+
+
+.fairy-cake:hover{
+    background-color: rgb(105, 237, 100);
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bread:hover{
+    background-color: rgb(241, 16, 9);
+    cursor: pointer;
+    padding: 10px;
+}
+
+.pain-au-chocolat:hover{
+    background-color: rgb(221, 185, 64);
+    cursor: pointer;
+    padding: 10px;
+   
+}
+
+.cinnimon-roll:hover {
+    background-color: cornflowerblue;
+    cursor: pointer;
+    padding: 10px;
+}

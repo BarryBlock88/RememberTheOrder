@@ -20,22 +20,18 @@ let startBtn = document.querySelector(".startbtn");
 let scoreCount = document.querySelector(".score");
 
 
-startBtn.addEventListener('click', (event) => {
-  if (start|| win) {
-    play();
-  }
-});
+
 function play() {
   win = false;
   sequence = [];
-  playerOrder = [];
-  flashhHoverHover = 0;
+  sequence = [];
+  flashhHover = 0;
   intervalId = 0;
   turn = 1;
-  scoreCount.innerHTML = 100;
+  scoreCount.innerHTML = '<h3>Your Score: 100</h3>';
   good = true;
   for (var i = 0; i < 20; i++) {
-    order.push(Math.floor(Math.random() * 4) + 1);
+    sequence.push(Math.floor(Math.random() * 4) + 1);
   }
   compTurn = true;
 
@@ -55,14 +51,38 @@ function gameTurn() {
  if (compTurn) {
     clearColor();
     setTimeout(() => {
-      if (order[flashhHover] == 1) one();
-      if (order[flashhHover] == 2) two();
-      if (order[flashhHover] == 3) three();
-      if (order[flashhHover] == 4) four();
+      if (sequence[flashhHover] == 1) one();
+      if (sequence[flashhHover] == 2) two();
+      if (sequence[flashhHover] == 3) three();
+      if (sequence[flashhHover] == 4) four();
       flashhHover++;
-    }, 200);
+    }, 700);
   }
 }
+function one() {
+  if (noise) {
+  noise = true;
+  faCake.style.backgroundColor = "rgb(105, 237, 100)";
+}}
+
+function two() {
+  if (noise) {
+    
+ painAu.style.backgroundColor = "rgb(221, 185, 64)";
+  }
+}
+
+function three() {
+  if (noise) {
+    
+   bread.style.backgroundColor = "rgb(241, 16, 9)";
+  }
+}
+
+function four() {
+  if (noise) {
+    cinRoll.style.backgroundColor = "cornflowerblue";
+}}
 
 function clearColor() {
   cinRoll.style.backgroundColor = "transparent";
