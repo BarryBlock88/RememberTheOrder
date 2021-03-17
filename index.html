@@ -16,13 +16,15 @@
 <body>
     <!-------game-status-info-section------->
     <div class="game_info_section row">
-        <div class="score col-6 ">
-            <h3>Your Score: 000</h3>
+        <div class="col-4">
+            <h3>Your Score:</h3>
+            <div class="col-2"> <h3 id="score"></h3></div>
+           
         </div>
         <div class="col-6">
-        <button type="button" class="btn hide-button" id="modal-btn" data-toggle="modal"
+            <button type="button" class="btn hide-button" id="modal-btn" data-toggle="modal"
                 data-target="#modal-option">Difficulty Options</button>
-                </div>
+        </div>
 
         <div class="modal row" id="modal-option" role="dialog">
             <div class="modal-dialog">
@@ -66,25 +68,25 @@
             </div>
             <div class="game_area col-6">
                 <div class="row ">
-                    <div class="cinnimon-roll col-6">
+                    <div class="col-6" id="cinnimon-roll">
                         <div class="game-btn">
                             <img src="assets/img/cinemon-roll.png" alt="Cinemon roll" class="img-fluid">
                         </div>
                     </div>
 
-                    <div class=" bread col-6">
+                    <div class="col-6" id="bread">
                         <div class="game-btn">
                             <img src="assets/img/bread_roll.png" alt="bread roll" class="img-fluid">
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class=" pain-au-chocolat col-6">
+                    <div class="col-6" id="pain-au-chocolat">
                         <div class="game-btn">
                             <img src="assets/img/pain-au-chocolat.png" alt="pain au chocolat" class=" img-fluid">
                         </div>
                     </div>
-                    <div class="fairy-cake col-6">
+                    <div class="col-6" id="fairy-cake">
                         <div class="game-btn">
                             <img src="assets/img/fairy-cake.png" alt="fairy cake" class=" img-fluid">
                         </div>
@@ -92,17 +94,23 @@
 
                 </div>
             </div>
-            <div class="col-3"></div>
+            <div class="col-3">
+                 
+                    <input type="checkbox" id="onBtn" required>
+                        <label for="onBtn">On</label>
+                    
+                
+            </div>
         </div>
         <div class="row box">
             <div class="col-6"></div>
-             <div class="startbtn ">
-            <button class="btn hide-button start-game col-6" onclick="play()">Start Taking Orders!</button>
-        </div>
-          
+            <div class="startbtn">
+                <button class="btn hide-button start-game col-6 startbtn" id="startbtn" >Start Taking Orders!</button>
+            </div>
+
         </div>
     </div>
-     <script src="assets/js/script.js"></script> 
+    <script src="assets/js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
 </body>

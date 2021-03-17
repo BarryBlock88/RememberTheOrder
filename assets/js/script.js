@@ -1,134 +1,85 @@
-
-let sequence = [];
+let order = [];
 let playerOrder = [];
-let flashhHoverHover;
+let flash;
 let turn;
 let good;
 let compTurn;
 let intervalId;
+let strict = false;
 let noise = true;
-let start = false;
+let on = false;
 let win;
 
+const turnCounter = document.querySelector('#score');
+const bread= document.querySelector('#bread');
+const cinRoll = document.querySelector('#cinnimon-roll');
+const painAu = document.querySelector('#pain-au-chocolat');
+const faCake = document.querySelector('#fairy-cake');
 
 
-let cinRoll = document.querySelector('.cinnimon-roll')
-let bread = document.querySelector('.bread')
-let faCake = document.querySelector('.fairy-cake')
-let painAu = document.querySelector('.pain-au-chocolat')
-let startBtn = document.querySelector(".startbtn");
-let scoreCount = document.querySelector(".score");
+const onButton = document.querySelector('#onBtn');
+const startBtn = document.querySelectorAll('.startbtn');
+const strictBtn = document.querySelector('#DOption3');
 
 
-
-function play() {
-  win = false;
-  sequence = [];
-  sequence = [];
-  flashhHover = 0;
-  intervalId = 0;
-  turn = 1;
-  scoreCount.innerHTML = '<h3>Your Score: 100</h3>';
-  good = true;
-  for (var i = 0; i < 20; i++) {
-    sequence.push(Math.floor(Math.random() * 4) + 1);
-  }
-  compTurn = true;
-
-  intervalId = setInterval(gameTurn, 800);
+strictBtn.addEventListener('change', (event) => {
+console.log('checked')
+if(strictBtn.checked == true){
+    strict == true;
+} else {
+    strict == false;
 }
+});
 
-function gameTurn() {
-  startBtn = false;
-
-  if (flashhHover == turn) {
-    clearInterval(intervalId);
-    compTurn = false;
+onButton.addEventListener('checked', (event) => {
+    if(onButton.checked == true){
+    on == true;
+    turnCounter.innerHTML = '0';
+} else {
+    on == false;
+    turnCounter.innerHTML = '';
     clearColor();
-    startBtn = true;
-  }
-
- if (compTurn) {
-    clearColor();
-    setTimeout(() => {
-      if (sequence[flashhHover] == 1) one();
-      if (sequence[flashhHover] == 2) two();
-      if (sequence[flashhHover] == 3) three();
-      if (sequence[flashhHover] == 4) four();
-      flashhHover++;
-    }, 700);
-  }
+    clearInterval(intervalid);
 }
-function one() {
-  if (noise) {
-  noise = true;
-  faCake.style.backgroundColor = "rgb(105, 237, 100)";
-}}
-
-function two() {
-  if (noise) {
-    
- painAu.style.backgroundColor = "rgb(221, 185, 64)";
-  }
+});
+startBtn.addEventListener('click', (event) => {
+if(on || startBtn.clicked == true){
+    play();
 }
+    });
 
-function three() {
-  if (noise) {
-    
-   bread.style.backgroundColor = "rgb(241, 16, 9)";
-  }
-}
 
-function four() {
-  if (noise) {
-    cinRoll.style.backgroundColor = "cornflowerblue";
-}}
+    function play(){
+        win = false;
+        order = [];
+        playerOrder = [];
+        flash = 0;
+        turn = 1;
+        intervalId = 0;
+        turnCounter.innerHTML = '1';
+        good = true;
+        for (let i = 0; i < 20; i++){
+            order.push(Math.floor(Math.random() * 4) + 1);
+        }
+        compTurn = true;
 
-function clearColor() {
-  cinRoll.style.backgroundColor = "transparent";
-  bread.style.backgroundColor = "transparent";
-  painAu.style.backgroundColor = "transparent";
-  faCake.style.backgroundColor = "transparent";
-}
-
-function flashColor() {
-  cinRoll.style.backgroundColor = "cornflowerblue";
-  bread.style.backgroundColor = "rgb(241, 16, 9)";
-  painAu.style.backgroundColor = "rgb(221, 185, 64)";
-  faCake.style.backgroundColor = "rgb(105, 237, 100)";
-}
-
-let diffOption1 = document.querySelector('#DOption1');
-let diffOption2 = document.querySelector('#DOption2');
-let diffOption3 = document.querySelector('#DOption3');
-let diffOption4 = document.querySelector('#DOption4');
-
-diffOption1.addEventListener('click' (event) === {
-    if (diffOption1 = checked) {
-        difficulty == 3;
-   
+        intervalId = setInterval(gameTurn, 800)
     }
-})
 
-diffOption2.addEventListener('click' (event) === {
-    if (diffOption2 = checked) {
-        difficulty == 2;
-   
-    }
-})
+    function gameTurn() {
+        on = false;
 
-diffOption3.addEventListener('click' (event) === {
-    if (diffOption3 = checked) {
-        difficulty == 1;
-   
-    }
-})
+        if(flash == turn) {
+            clearInterval(intervalId);
+            compTurn = false;
+            clearColor();
+            on = true;
+        }
 
-diffOption4.addEventListener('click' (event) === {
-    if (diffOption4 = checked) {
-        difficulty == 0.5;
-   
-    }
-})
-
-
+        if(compTurn){
+            clearColor();
+            setTimeout(() => {
+                if(order[flash] = 1) one();
+            }, 200)
+        };
+    };

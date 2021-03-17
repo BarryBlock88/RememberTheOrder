@@ -60,52 +60,52 @@ body, html {
     padding: 10px;
 }
 
-.cinnimon-roll {
+#cinnimon-roll {
     position: relative;
     width: 160px;
     height: 160px;
    
 }
 
-.bread {
+#bread {
     position: relative;
      width: 160px;
     height: 160px;
   
 }
 
-.pain-au-chocolat{
+#pain-au-chocolat{
     position: relative;
      width: 160px;
     height: 160px;
 }
-.fairy-cake {
+#fairy-cake {
 position: relative;
      width: 160px;
     height: 160px;
 }
 
 
-.fairy-cake:hover{
+#fairy-cake:hover{
     background-color: rgb(105, 237, 100);
     cursor: pointer;
     padding: 10px;
 }
 
-.bread:hover{
+#bread:hover{
     background-color: rgb(241, 16, 9);
     cursor: pointer;
     padding: 10px;
 }
 
-.pain-au-chocolat:hover{
+#pain-au-chocolat:hover{
     background-color: rgb(221, 185, 64);
     cursor: pointer;
     padding: 10px;
    
 }
 
-.cinnimon-roll:hover {
+#cinnimon-roll:hover {
     background-color: cornflowerblue;
     cursor: pointer;
     padding: 10px;
