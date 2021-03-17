@@ -6,6 +6,7 @@ let good;
 let compTurn;
 let intervalId;
 let strict = false;
+let style = true;
 let noise = true;
 let on = false;
 let win;
@@ -17,9 +18,9 @@ const painAu = document.querySelector('#pain-au-chocolat');
 const faCake = document.querySelector('#fairy-cake');
 
 
-const onButton = document.querySelector('#onBtn');
-const startBtn = document.querySelectorAll('.startbtn');
-const strictBtn = document.querySelector('#DOption3');
+const onButton = document.getElementById('#onBtn');
+const startBtn = document.getElementById('#startbtn');
+const strictBtn = document.getElementById('#DOption3');
 
 
 strictBtn.addEventListener('change', (event) => {
@@ -31,8 +32,10 @@ if(strictBtn.checked == true){
 }
 });
 
-onButton.addEventListener('checked', (event) => {
-    if(onButton.checked == true){
+onButton.addEventListener('click', buttonOn());
+
+function buttonOn() {
+    if(onButton.click == true){
     on == true;
     turnCounter.innerHTML = '0';
 } else {
@@ -41,9 +44,9 @@ onButton.addEventListener('checked', (event) => {
     clearColor();
     clearInterval(intervalid);
 }
-});
+};
 startBtn.addEventListener('click', (event) => {
-if(on || startBtn.clicked == true){
+if(on == true){
     play();
 }
     });
@@ -80,6 +83,45 @@ if(on || startBtn.clicked == true){
             clearColor();
             setTimeout(() => {
                 if(order[flash] = 1) one();
+                if(order[flash] = 2) two();
+                if(order[flash] = 3) three();
+                if(order[flash] = 4) four();
+                flash++;
             }, 200)
+
         };
     };
+
+    function one() {
+   if (style) {
+    style = true;
+  faCake.style.backgroundColor = "rgb(105, 237, 100)";
+}}
+
+function two() {
+  if (style) {
+    style = true;
+ painAu.style.backgroundColor = "rgb(221, 185, 64)";
+  }
+}
+
+function three() {
+  if (style) {
+    style = true;
+   bread.style.backgroundColor = "rgb(241, 16, 9)";
+  }
+}
+
+function four() {
+   if (style) {
+    style = true;
+    cinRoll.style.backgroundColor = "cornflowerblue";
+}}
+
+
+function clearColor() {
+  cinRoll.style.backgroundColor = "transparent";
+  bread.style.backgroundColor = "transparent";
+  painAu.style.backgroundColor = "transparent";
+  faCake.style.backgroundColor = "transparent";
+}
