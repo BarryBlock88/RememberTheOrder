@@ -1,5 +1,5 @@
 let sequence = [];
-let playersequence = [];
+let playerSequence = [];
 let flash;
 let level;
 let good;
@@ -107,7 +107,7 @@ function clearBackground() {
 
 cinRoll.addEventListener( 'click', function () {
     if (on) {
-        playersequence.push(1);
+        playerSequence.push(1);
         //checkAnswer();
         one();
         if (!win) {
@@ -120,7 +120,7 @@ cinRoll.addEventListener( 'click', function () {
 
 bread.addEventListener('click', function () {
     if (on) {
-        playersequence.push(2);
+        playerSequence.push(2);
         //checkAnswer();
         two();
         if (!win) {
@@ -133,7 +133,7 @@ bread.addEventListener('click', function () {
 
 painAu.addEventListener('click', function () {
     if (on) {
-        playersequence.push(3);
+        playerSequence.push(3);
         //checkAnswer();
         three();
         if (!win) {
@@ -146,7 +146,7 @@ painAu.addEventListener('click', function () {
 
 faCake.addEventListener('click', function () {
     if (on) {
-        playersequence.push(4);
+        playerSequence.push(4);
         //checkAnswer();
         four();
         if (!win) {
@@ -165,3 +165,22 @@ painAu.addEventListener('mouseenter', three);
 painAu.addEventListener('mouseleave', clearBackground);
 faCake.addEventListener('mouseenter', four);
 faCake.addEventListener('mouseleave', clearBackground);
+
+function checkAnswer(){
+    if(playerSequence[playerSequence.length - 1] != sequence[playerSequence.length - 1])
+    good = false;
+
+
+    if(playerSequence.length == 30 && good == true) {
+        winGame();
+    }
+    if(good == false){
+        flashColor();
+        levelCounter.innerHTML ="OH NO!";
+        setTimeout(function () {
+            levelCounter.innerHTML = level;
+                clearBackground();
+                play();
+            }, 800);
+        }
+    }
