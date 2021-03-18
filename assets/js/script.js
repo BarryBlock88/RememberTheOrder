@@ -1,127 +1,167 @@
-let order = [];
-let playerOrder = [];
+let sequence = [];
+let playersequence = [];
 let flash;
-let turn;
+let level;
 let good;
-let compTurn;
-let intervalId;
+let computerSequence;
+let levelInterval;
 let strict = false;
-let style = true;
-let noise = true;
+let sound = true;
 let on = false;
 let win;
 
-const turnCounter = document.querySelector('#score');
-const bread= document.querySelector('#bread');
-const cinRoll = document.querySelector('#cinnimon-roll');
-const painAu = document.querySelector('#pain-au-chocolat');
-const faCake = document.querySelector('#fairy-cake');
+
+let bread = document.getElementById('bread');
+let cinRoll = document.getElementById('cinnimon-roll');
+let painAu = document.getElementById('pain-au-chocolat');
+let faCake = document.getElementById('fairy-cake');
 
 
-const onButton = document.getElementById('#onBtn');
-const startBtn = document.getElementById('#startbtn');
-const strictBtn = document.getElementById('#DOption3');
+let startBtn = document.getElementById('startbtn');
+let levelCounter = document.getElementById('score');
+let onButton = document.getElementById('onBtn')
 
+onButton.addEventListener('click', gameOn)
 
-strictBtn.addEventListener('change', (event) => {
-console.log('checked')
-if(strictBtn.checked == true){
-    strict == true;
-} else {
-    strict == false;
-}
-});
-
-onButton.addEventListener('click', buttonOn());
-
-function buttonOn() {
-    if(onButton.click == true){
-    on == true;
-    turnCounter.innerHTML = '0';
-} else {
-    on == false;
-    turnCounter.innerHTML = '';
-    clearColor();
-    clearInterval(intervalid);
-}
+function gameOn() {
+    console.log('GameOn')
+    if (onButton.checked == true) {
+        on == true;
+        levelCounter.innerHTML = "<h3>Ready!</h3>";
+    } else {
+        on == false;
+        levelCounter.innerHTML = "<h3>Oven Off-></h3>"
+        clearBackground();
+        clearInterval(levelInterval);
+    }
 };
-startBtn.addEventListener('click', (event) => {
-if(on == true){
-    play();
+
+startBtn.addEventListener('click', play, on == true)
+
+function play() {
+    win = false;
+    sequence = [];
+    playerSequence = [];
+    flash = 0;
+    level = 1;
+    levelInterval = 0;
+    levelCounter.innerHTML = 1
+    good = true;
+    for (let i = 0; i < 30; i++) {
+        sequence.push(Math.floor(Math.random() * 4) + 1);
+    }
+    computerSequence = true;
+    levelInterval = setInterval(gameTurn, 800)
 }
-    });
 
+function gameTurn() {
+    on = false;
 
-    function play(){
-        win = false;
-        order = [];
-        playerOrder = [];
-        flash = 0;
-        turn = 1;
-        intervalId = 0;
-        turnCounter.innerHTML = '1';
-        good = true;
-        for (let i = 0; i < 20; i++){
-            order.push(Math.floor(Math.random() * 4) + 1);
-        }
-        compTurn = true;
-
-        intervalId = setInterval(gameTurn, 800)
+    if (flash == level) {
+        clearInterval(levelInterval);
+        computerSequence = false;
+        clearBackground();
+        on = true;
     }
 
-    function gameTurn() {
-        on = false;
+    if (computerSequence) {
+        clearBackground();
+        setTimeout(function () {
+            if (sequence[flash] = 1) one();
+            if (sequence[flash] = 2) two();
+            if (sequence[flash] = 3) three();
+            if (sequence[flash] = 4) four();
+            flash++;
+        }, 500)
+    }
 
-        if(flash == turn) {
-            clearInterval(intervalId);
-            compTurn = false;
-            clearColor();
-            on = true;
-        }
+};
 
-        if(compTurn){
-            clearColor();
-            setTimeout(() => {
-                if(order[flash] = 1) one();
-                if(order[flash] = 2) two();
-                if(order[flash] = 3) three();
-                if(order[flash] = 4) four();
-                flash++;
-            }, 200)
-
-        };
-    };
-
-    function one() {
-   if (style) {
-    style = true;
-  faCake.style.backgroundColor = "rgb(105, 237, 100)";
-}}
+function one() {
+    cinRoll.style.backgroundColor = "cornflowerblue";
+};
 
 function two() {
-  if (style) {
-    style = true;
- painAu.style.backgroundColor = "rgb(221, 185, 64)";
-  }
-}
+    bread.style.backgroundColor = "rgb(241, 16, 9)";
+};
+
 
 function three() {
-  if (style) {
-    style = true;
-   bread.style.backgroundColor = "rgb(241, 16, 9)";
-  }
-}
+    painAu.style.backgroundColor = "rgb(221, 185, 64)";
+};
+
 
 function four() {
-   if (style) {
-    style = true;
-    cinRoll.style.backgroundColor = "cornflowerblue";
-}}
+    faCake.style.backgroundColor = "rgb(105, 237, 100)";
+};
 
 
-function clearColor() {
-  cinRoll.style.backgroundColor = "transparent";
-  bread.style.backgroundColor = "transparent";
-  painAu.style.backgroundColor = "transparent";
-  faCake.style.backgroundColor = "transparent";
+function clearBackground() {
+    cinRoll.style.backgroundColor = "transparent";
+    bread.style.backgroundColor = "transparent";
+    painAu.style.backgroundColor = "transparent";
+    faCake.style.backgroundColor = "transparent";
 }
+
+
+
+cinRoll.addEventListener( 'click', function () {
+    if (on) {
+        playersequence.push(1);
+        //checkAnswer();
+        one();
+        if (!win) {
+            setTimeout(function () {
+                clearBackground();
+            }, 300);
+        }
+    }
+});
+
+bread.addEventListener('click', function () {
+    if (on) {
+        playersequence.push(2);
+        //checkAnswer();
+        two();
+        if (!win) {
+            setTimeout(function () {
+                clearBackground();
+            }, 300);
+        }
+    }
+});
+
+painAu.addEventListener('click', function () {
+    if (on) {
+        playersequence.push(3);
+        //checkAnswer();
+        three();
+        if (!win) {
+            setTimeout(function () {
+                clearBackground();
+            }, 300);
+        }
+    }
+});
+
+faCake.addEventListener('click', function () {
+    if (on) {
+        playersequence.push(4);
+        //checkAnswer();
+        four();
+        if (!win) {
+            setTimeout(function () {
+                clearBackground();
+            }, 300);
+        }
+    }
+});
+
+cinRoll.addEventListener('mouseenter', one);
+cinRoll.addEventListener('mouseleave', clearBackground);
+bread.addEventListener('mouseenter', two);
+bread.addEventListener('mouseleave', clearBackground);
+painAu.addEventListener('mouseenter', three);
+painAu.addEventListener('mouseleave', clearBackground);
+faCake.addEventListener('mouseenter', four);
+faCake.addEventListener('mouseleave', clearBackground);

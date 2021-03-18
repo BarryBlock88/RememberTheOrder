@@ -11,15 +11,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Game</title>
+    
 </head>
 
 <body>
+
     <!-------game-status-info-section------->
     <div class="game_info_section row">
-        <div class="col-6">
-            <h3>Your Score:</h3>
-            <h3 id="score"></h3>
-           
+        
+        <div class="col-6"><h3>Level</h3></div>
+         <div id="score">
+            <h3></h3>
         </div>
         <div class="col-6">
             <button type="button" class="btn hide-button" id="modal-btn" data-toggle="modal"
@@ -95,9 +97,10 @@
                 </div>
             </div>
             <div class="col-3">
-                 <button type="button" class="btn hide-button" id="onBtn" data-toggle="on/off"
-                >on</button>
-                
+                <form>
+                 <input type="checkbox"  id="onBtn">
+                 <label for="onBtn">Turn On</label>
+                </form>
                     
                 
             </div>

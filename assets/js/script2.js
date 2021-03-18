@@ -132,3 +132,21 @@ diffOption4.addEventListener('click' (event) === {
 })
 
 
+
+
+
+strictBtn.addEventListener('change', function()  {
+console.log('checked')
+if(strictBtn.checked == true){
+    strict == true;
+} else {
+    strict == false;
+}
+});
+
+
+    if (sound) {
+    let audio = document.getElementById("sound1");
+    audio.play();
+  }
+  sound = true;
