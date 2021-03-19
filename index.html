@@ -24,36 +24,20 @@
             <h3></h3>
         </div>
         <div class="col-6">
-            <button type="button" class="btn hide-button" id="modal-btn" data-toggle="modal"
-                data-target="#modal-option">Difficulty Options</button>
+            <!--<button type="button" class="btn hide-button" id="modal-btn" data-toggle="modal"
+                data-target="#modal-option">-->
+                <form>
+                    <input type="button" id="difficulty" value="NORMAL" style="color: pink"
+                    onclick="hardModeBtn();">
+                </form>  
         </div>
 
         <div class="modal row" id="modal-option" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <ul class="diff-lvl col-12">
-                            <h3>Chose your difficulty</h3>
-                            <li>
-                                <input type="radio" id="DOption1" name="difficulty" value="3">
-                                <label for="DOption1">Monday</label>
-                            </li>
-
-                            <li>
-                                <input type="radio" id="DOption2" name="difficulty" value="2" checked>
-                                <label for="DOption2">Wednesday</label>
-                            </li>
-
-                            <li>
-                                <input type="radio" id="DOption3" name="difficulty" value="1">
-                                <label for="DOption3">Saturday</label>
-                            </li>
-
-                            <li>
-                                <input type="radio" id="DOption4" name="difficulty" value="0.5">
-                                <label for="DOption4">Sunday Morning</label>
-                            </li>
-                        </ul>
+                          
+                        
                         <button type="button" class="close startbtn" data-dismiss="modal"
                             aria-label=""><span>Bake</span></button>
                     </div>
@@ -99,9 +83,8 @@
             <div class="col-3">
                 <form>
                     <input type="button" id="onBtn" value="OFF" style="color: red"
-                    onclick="toggle(onBtn);">
-                </form>
-                    
+                    onclick="onButtonOn();">
+                </form>     
                 
             </div>
         </div>

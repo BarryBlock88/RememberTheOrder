@@ -7,6 +7,7 @@ let computerSequence;
 let levelInterval;
 let sound = true;
 let on = false;
+let hard = false;
 let win;
 
 
@@ -19,24 +20,39 @@ let faCake = document.getElementById('fairy-cake');
 let startBtn = document.getElementById('startbtn');
 let levelCounter = document.getElementById('score');
 let onButton = document.getElementById('onBtn')
+let hardMode = document.getElementById('difficulty')
 
-function toggle(onButton) 
-{
-     switch(onButton.value)
-     {
-           case "OFF":
-               onButton.value = "ON";
-               onButton.style.color = "green"
-               break;
-          case "ON":
-               onButton.value = "OFF";
-               onButton.style.color = "red"
-               break;
-                
-     }
+function onButtonOn() {
+  if (onButton.value == "OFF") {
+onButton.value = "ON";
+     onButton.style.color = "blue"
+  } else {
+    onButton.value = "OFF";
+    onButton.style.color = "red"
+  }
+}
+function hardModeBtn() {
+  if (hardMode.value == "NORMAL") {
+    hardMode.value = "BUSY";
+     hardMode.style.color = "blue"
+  } else {
+    hardMode.value = "NORMAL";
+    hardMode.style.color = "pink"
+  }
 }
 
-onButton.addEventListener('click', gameOn)
+
+hardMode.addEventListener('click', hardModeActive);
+function hardModeActive() {
+  if (hardMode.value == "BUSY") {
+    hard = true;
+  } else {
+    hard = false;
+  }
+};
+
+
+onButton.addEventListener('click', gameOn);
 function gameOn() {
     console.log('GameOn')
     if (onButton.value == "ON") {
@@ -59,7 +75,7 @@ function play() {
     flash = 0;
     levelInterval = 0;
     level = 1;
-    levelCounter.innerHTML = level;
+    levelCounter.innerHTML = 1;
     good = true;
     for (let i = 0; i < 20; i++) {
         sequence.push(Math.floor(Math.random() * 4) + 1);
@@ -127,10 +143,10 @@ function clearBackground() {
 }
 
 function flashColor() {
-    cinRoll.style.border = "red";
-    bread.style.border = "red";
-    painAu.style.border = "red";
-    faCake.style.border = "red";
+    cinRoll.style.border = "red 1px";
+    bread.style.border = "red 1px";
+    painAu.style.border = "red 1px";
+    faCake.style.border = "red 1px";
 }
 
 
@@ -212,7 +228,7 @@ function checkAnswer(){
             levelCounter.innerHTML == level;
                 clearBackground();
               
-                if(strict) {
+                if(hard) {
                     play();
                 } else {
                     computerSequence = true;
