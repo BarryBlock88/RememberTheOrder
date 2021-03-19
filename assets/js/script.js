@@ -5,7 +5,6 @@ let level;
 let good;
 let computerSequence;
 let levelInterval;
-let strict = false;
 let sound = true;
 let on = false;
 let win;
@@ -21,16 +20,31 @@ let startBtn = document.getElementById('startbtn');
 let levelCounter = document.getElementById('score');
 let onButton = document.getElementById('onBtn')
 
-onButton.addEventListener('click', gameOn)
+function toggle(onButton) 
+{
+     switch(onButton.value)
+     {
+           case "OFF":
+               onButton.value = "ON";
+               onButton.style.color = "green"
+               break;
+          case "ON":
+               onButton.value = "OFF";
+               onButton.style.color = "red"
+               break;
+                
+     }
+}
 
+onButton.addEventListener('click', gameOn)
 function gameOn() {
     console.log('GameOn')
-    if (onButton.checked == true) {
+    if (onButton.value == "ON") {
         on == true;
-        levelCounter.innerHTML = "<h3>Ready!</h3>";
+        levelCounter.innerHTML = "<h3>Ready...start taking orders!</h3>";
     } else {
         on == false;
-        levelCounter.innerHTML = "<h3>Oven Off-></h3>"
+        levelCounter.innerHTML = ""
         clearBackground();
         clearInterval(levelInterval);
     }
@@ -43,14 +57,15 @@ function play() {
     sequence = [];
     playerSequence = [];
     flash = 0;
-    level = 1;
     levelInterval = 0;
-    levelCounter.innerHTML = 1
+    level = 1;
+    levelCounter.innerHTML = level;
     good = true;
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 20; i++) {
         sequence.push(Math.floor(Math.random() * 4) + 1);
     }
     computerSequence = true;
+
     levelInterval = setInterval(gameTurn, 800)
 }
 
@@ -63,16 +78,24 @@ function gameTurn() {
         clearBackground();
         on = true;
     }
-
+// Asigns the numbers 1-4 ,calls the function to flash the correct sequence of colours for the computer
     if (computerSequence) {
         clearBackground();
         setTimeout(function () {
-            if (sequence[flash] = 1) one();
-            if (sequence[flash] = 2) two();
-            if (sequence[flash] = 3) three();
-            if (sequence[flash] = 4) four();
+            if (sequence[flash] == 1) { 
+                one();
+            }
+            if (sequence[flash] == 2) {
+                two();
+            }
+            if (sequence[flash] == 3) {
+                three();
+            }
+            if (sequence[flash] == 4) {
+                four();
+            }
             flash++;
-        }, 500)
+        }, 200)
     }
 
 };
@@ -103,12 +126,20 @@ function clearBackground() {
     faCake.style.backgroundColor = "transparent";
 }
 
+function flashColor() {
+    cinRoll.style.border = "red";
+    bread.style.border = "red";
+    painAu.style.border = "red";
+    faCake.style.border = "red";
+}
+
+
 
 
 cinRoll.addEventListener( 'click', function () {
     if (on) {
         playerSequence.push(1);
-        //checkAnswer();
+        checkAnswer();
         one();
         if (!win) {
             setTimeout(function () {
@@ -121,7 +152,7 @@ cinRoll.addEventListener( 'click', function () {
 bread.addEventListener('click', function () {
     if (on) {
         playerSequence.push(2);
-        //checkAnswer();
+        checkAnswer();
         two();
         if (!win) {
             setTimeout(function () {
@@ -134,7 +165,7 @@ bread.addEventListener('click', function () {
 painAu.addEventListener('click', function () {
     if (on) {
         playerSequence.push(3);
-        //checkAnswer();
+        checkAnswer();
         three();
         if (!win) {
             setTimeout(function () {
@@ -147,7 +178,7 @@ painAu.addEventListener('click', function () {
 faCake.addEventListener('click', function () {
     if (on) {
         playerSequence.push(4);
-        //checkAnswer();
+        checkAnswer();
         four();
         if (!win) {
             setTimeout(function () {
@@ -171,16 +202,41 @@ function checkAnswer(){
     good = false;
 
 
-    if(playerSequence.length == 30 && good == true) {
+    if(playerSequence.length == 20 && good == true) {
         winGame();
     }
     if(good == false){
         flashColor();
         levelCounter.innerHTML ="OH NO!";
         setTimeout(function () {
-            levelCounter.innerHTML = level;
+            levelCounter.innerHTML == level;
                 clearBackground();
-                play();
-            }, 800);
+              
+                if(strict) {
+                    play();
+                } else {
+                    computerSequence = true;
+                    flash = 0;
+                    playerSequence = [];
+                    good = true;
+                    levelInterval = setInterval(gameTurn, 800);
+                }
+                }, 800);
         }
+    
+    if (level == playerSequence.length && good && !win) {
+        level++;
+        playerSequence = [];
+        computerSequence = true;
+        flash = 0;
+        levelCounter.innerHTML === level;
+        levelInterval = setInterval(gameTurn, 800);
     }
+}
+
+function winGame() {
+    flashColor();
+    levelCounter.innerHTML = "You WON!"
+    on = false;
+    win = true;
+}
