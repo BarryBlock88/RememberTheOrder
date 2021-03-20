@@ -26,6 +26,7 @@ function onButtonOn() {
   if (onButton.value == "OFF") {
 onButton.value = "ON";
      onButton.style.color = "blue"
+    
   } else {
     onButton.value = "OFF";
     onButton.style.color = "red"
