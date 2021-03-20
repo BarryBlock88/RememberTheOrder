@@ -147,16 +147,19 @@ function flashColor() {
     bread.style.border = "thick solid pink";
     painAu.style.border = "thick solid pink";
     faCake.style.border = "thick solid pink";
-
-    setTimeout(function(){
-    cinRoll.style.border = "thick solid rgb(212, 113, 19);";
-    bread.style.border = "thick solid rgb(212, 113, 19);";
-    painAu.style.border = "thick solid rgb(212, 113, 19);";
-    faCake.style.border = "thick solid rgb(212, 113, 19);";
-    },200);
+     if (on) {
+            setTimeout(function() {
+                clearColor();
+            }, 300);
+        }
 
 }
-
+function clearColor() {
+    cinRoll.style.border = "none";
+    bread.style.border = "none";
+    painAu.style.border = "none";
+    faCake.style.border = "none";
+}
 
 
 cinRoll.addEventListener( 'click', function() {
@@ -224,7 +227,7 @@ function checkAnswer(){
     if(playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1])
     good = false;
 
-if(playerSequence.length == 20 && good) {
+    else if(playerSequence.length == 20 && good) {
         winGame();
     }
     playError();
@@ -256,10 +259,10 @@ function playError() {
 function nextLevel() {
     if (level == playerSequence.length && good && !win) {
         level++;
+        levelCounter.innerHTML = level;
         playerSequence = [];
         computerSequence = true;
         flash = 0;
-        levelCounter.innerHTML === level;
         levelInterval = setInterval(gameTurn, 800);
     }
 }
