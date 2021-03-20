@@ -37,7 +37,7 @@ function hardModeBtn() {
      hardMode.style.color = "blue"
   } else {
     hardMode.value = "NORMAL";
-    hardMode.style.color = "pink"
+    hardMode.style.color = "brown"
   }
 }
 
@@ -97,7 +97,7 @@ function gameTurn() {
 // Asigns the numbers 1-4 ,calls the function to flash the correct sequence of colours for the computer
     if (computerSequence) {
         clearBackground();
-        setTimeout(function () {
+        setTimeout(function() {
             if (sequence[flash] == 1) { 
                 one();
             }
@@ -143,61 +143,68 @@ function clearBackground() {
 }
 
 function flashColor() {
-    cinRoll.style.border = "red 1px";
-    bread.style.border = "red 1px";
-    painAu.style.border = "red 1px";
-    faCake.style.border = "red 1px";
+    cinRoll.style.border = "thick solid pink";
+    bread.style.border = "thick solid pink";
+    painAu.style.border = "thick solid pink";
+    faCake.style.border = "thick solid pink";
+
+    setTimeout(function(){
+    cinRoll.style.border = "thick solid rgb(212, 113, 19);";
+    bread.style.border = "thick solid rgb(212, 113, 19);";
+    painAu.style.border = "thick solid rgb(212, 113, 19);";
+    faCake.style.border = "thick solid rgb(212, 113, 19);";
+    },200);
+
 }
 
 
 
-
-cinRoll.addEventListener( 'click', function () {
-    if (on) {
+cinRoll.addEventListener( 'click', function() {
+    if (on == true) {
         playerSequence.push(1);
         checkAnswer();
         one();
         if (!win) {
-            setTimeout(function () {
+            setTimeout(function() {
                 clearBackground();
             }, 300);
         }
     }
 });
 
-bread.addEventListener('click', function () {
-    if (on) {
+bread.addEventListener('click', function() {
+    if (on == true) {
         playerSequence.push(2);
         checkAnswer();
         two();
         if (!win) {
-            setTimeout(function () {
+            setTimeout(function() {
                 clearBackground();
             }, 300);
         }
     }
 });
 
-painAu.addEventListener('click', function () {
-    if (on) {
+painAu.addEventListener('click', function() {
+    if (on == true) {
         playerSequence.push(3);
         checkAnswer();
         three();
         if (!win) {
-            setTimeout(function () {
+            setTimeout(function() {
                 clearBackground();
             }, 300);
         }
     }
 });
 
-faCake.addEventListener('click', function () {
-    if (on) {
+faCake.addEventListener('click', function() {
+    if (on == true) {
         playerSequence.push(4);
         checkAnswer();
         four();
         if (!win) {
-            setTimeout(function () {
+            setTimeout(function() {
                 clearBackground();
             }, 300);
         }
@@ -214,18 +221,22 @@ faCake.addEventListener('mouseenter', four);
 faCake.addEventListener('mouseleave', clearBackground);
 
 function checkAnswer(){
-    if(playerSequence[playerSequence.length - 1] != sequence[playerSequence.length - 1])
+    if(playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1])
     good = false;
 
-
-    if(playerSequence.length == 20 && good == true) {
+if(playerSequence.length == 20 && good) {
         winGame();
     }
+    playError();
+    nextLevel();
+}
+
+function playError() {
     if(good == false){
         flashColor();
-        levelCounter.innerHTML ="OH NO!";
-        setTimeout(function () {
-            levelCounter.innerHTML == level;
+        levelCounter.innerHTML ="OH NO you made a mistake!";
+        setTimeout(function() {
+            levelCounter.innerHTML = level;
                 clearBackground();
               
                 if(hard) {
@@ -237,9 +248,12 @@ function checkAnswer(){
                     good = true;
                     levelInterval = setInterval(gameTurn, 800);
                 }
-                }, 800);
+                }, 200);
         }
-    
+    }
+
+
+function nextLevel() {
     if (level == playerSequence.length && good && !win) {
         level++;
         playerSequence = [];
