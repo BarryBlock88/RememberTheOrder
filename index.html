@@ -15,93 +15,161 @@
 </head>
 
 <body>
-    
+
     <div class="modal row" id="modal-boss" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="row container-fluid">
-                        <div class="col-6"> <h2>HEY THERE! <br> WANT A JOB?</h2>
-                        <button type="button" class="close" data-dismiss="modal"
-                            aria-label=""><span>Bake</span></button></div>
+                        <div class="col-6">
+                            <h2>HEY THERE! <br> WANT A JOB?</h2>
+                            <button type="button" class="close" data-dismiss="modal" data-target="#modal-rules" data-toggle='modal'
+                                aria-label=""><span>Heck Yes!</span></button>
+                        </div>
                         <div class="col-6">
                             <img src="assets/img/bread_boss1.png" alt="boss cartoon" class="img-fluid">
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-        <!-------game-status-info-section------->
-        <div class="game_info_section row">
+    <div class="modal row" id="modal-rules" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row container-fluid">
+                        <div class="col-6">
+                            <p>This job is easy <br> just turn on the oven <br> when its ready
+                                <br> start taking orders <br> by clicking the button below.</p>
+                            <button type="button" class="close" data-dismiss="modal" data-target="#modal-rules2" data-toggle='modal'
+                                aria-label=""><span>Next</span></button>
+                        </div>
+                        <div class="col-6">
+                            <img src="assets/img/bread_boss1.png" alt="boss cartoon" class="img-fluid">
+                        </div>
 
-            <div class="col-6">
-                <h3>Level</h3>
+                    </div>
+                </div>
             </div>
-            <div id="score">
+        </div>
+    </div>
+    <div class="modal row" id="modal-rules2" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row container-fluid">
+                        <div class="col-6">
+                            <p>Its your job <br> To remember the order of the cakes <br> they are highlighted in color 
+                                <br> then you must click on the cake <br> In the order you remember</p>
+                            <button type="button" class="close" data-dismiss="modal" data-target="#modal-rules3" data-toggle='modal'
+                                aria-label=""><span>Next</span></button>
+                        </div>
+                        <div class="col-6">
+                            <img src="assets/img/bread_boss1.png" alt="boss cartoon" class="img-fluid">
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <div class="col-6">
-                <!--<button type="button" class="btn hide-button" id="modal-btn" data-toggle="modal"
+        </div>
+    </div>
+    <div class="modal row" id="modal-rules3" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row container-fluid">
+                        <div class="col-6">
+                            <p>Each time you remember correctly <br> you proceed to the next level
+                                 <br> Each level you will have one more item to remember <br> Good Luck! </p>
+                            <button type="button" class="close" data-dismiss="modal"
+                                aria-label=""><span>Bake</span></button>
+                        </div>
+                        <div class="col-6">
+                            <img src="assets/img/bread_boss1.png" alt="boss cartoon" class="img-fluid">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------game-status-info-section------->
+    <div class="game_info_section row">
+
+        <div class="col-6">
+            <h3>Level</h3>
+        </div>
+        <div id="score">
+        </div>
+        <div class="col-6">
+            <!--<button type="button" class="btn hide-button" id="modal-btn" data-toggle="modal"
                 data-target="#modal-option">-->
+            <form>
+                <input type="button" id="difficulty" value="NORMAL" style="color: brown" onclick="hardModeBtn();">
+            </form>
+        </div>
+
+
+        <div class="row container-fluid">
+            <div class="col-3">
+                <img src="assets/img/costumer_bread.png" alt="costumer cartoon" class="img-fluid">
+            </div>
+            <div class="game_area col-6">
+                <div class="row ">
+                    <div class="col-6" id="cinnimon-roll">
+                        <div class="game-btn">
+                            <img src="assets/img/cinemon-roll.png" alt="Cinemon roll" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-6" id="bread">
+                        <div class="game-btn">
+                            <img src="assets/img/bread_roll.png" alt="bread roll" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6" id="pain-au-chocolat">
+                        <div class="game-btn">
+                            <img src="assets/img/pain-au-chocolat.png" alt="pain au chocolat" class=" img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-6" id="fairy-cake">
+                        <div class="game-btn">
+                            <img src="assets/img/fairy-cake.png" alt="fairy cake" class=" img-fluid">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-3">
                 <form>
-                    <input type="button" id="difficulty" value="NORMAL" style="color: brown" onclick="hardModeBtn();">
+                    <input type="button" id="onBtn" value="OFF" style="color: red" onclick="onButtonOn();">
                 </form>
-            </div>
-
-
-            <div class="row container-fluid">
-                <div class="col-3">
-                    <img src="assets/img/costumer_bread.png" alt="costumer cartoon" class="img-fluid">
-                </div>
-                <div class="game_area col-6">
-                    <div class="row ">
-                        <div class="col-6" id="cinnimon-roll">
-                            <div class="game-btn">
-                                <img src="assets/img/cinemon-roll.png" alt="Cinemon roll" class="img-fluid">
-                            </div>
-                        </div>
-
-                        <div class="col-6" id="bread">
-                            <div class="game-btn">
-                                <img src="assets/img/bread_roll.png" alt="bread roll" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6" id="pain-au-chocolat">
-                            <div class="game-btn">
-                                <img src="assets/img/pain-au-chocolat.png" alt="pain au chocolat" class=" img-fluid">
-                            </div>
-                        </div>
-                        <div class="col-6" id="fairy-cake">
-                            <div class="game-btn">
-                                <img src="assets/img/fairy-cake.png" alt="fairy cake" class=" img-fluid">
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-3">
-                    <form>
-                        <input type="button" id="onBtn" value="OFF"  style="color: red" onclick="onButtonOn();">
-                    </form>
-
-                </div>
-            </div>
-            <div class="row box">
-                <div class="col-6"></div>
-                <div class="startbtn">
-                    <button class="btn hide-button start-game col-6 startbtn" id="startbtn">Start Taking
-                        Orders!</button>
-                </div>
 
             </div>
         </div>
-        <script src="assets/js/script.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+        <div class="row box">
+            <div class="col-6"></div>
+            <div class="startbtn">
+                <button class="btn hide-button start-game col-6 startbtn" id="startbtn">Start Taking
+                    Orders!</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            $('#modal-boss').modal('show');
+        });
+    </script>
 </body>
 
 </html>
