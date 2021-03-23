@@ -67,9 +67,10 @@ function gameOn() {
     }
 };
 
-startBtn.addEventListener('click', play, on == true)
+startBtn.addEventListener('click', play)
 
 function play() {
+    if(on == true){
     win = false;
     sequence = [];
     playerSequence = [];
@@ -84,6 +85,7 @@ function play() {
     computerSequence = true;
 
     levelInterval = setInterval(gameTurn, 800)
+}
 }
 
 function gameTurn() {
