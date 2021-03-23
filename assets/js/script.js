@@ -23,70 +23,78 @@ let onButton = document.getElementById('onBtn')
 let hardMode = document.getElementById('difficulty')
 
 function onButtonOn() {
-  if (onButton.value == "OFF") {
-onButton.value = "ON";
-     onButton.style.color = "blue"
-    
-  } else {
-    onButton.value = "OFF";
-    onButton.style.color = "red"
-  }
+    if (onButton.value == "OFF") {
+        onButton.value = "ON";
+        onButton.style.color = "blue"
+
+    } else {
+        onButton.value = "OFF";
+        onButton.style.color = "red"
+    }
 }
 function hardModeBtn() {
-  if (hardMode.value == "NORMAL") {
-    hardMode.value = "BUSY";
-     hardMode.style.color = "blue"
-  } else {
-    hardMode.value = "NORMAL";
-    hardMode.style.color = "brown"
-  }
+    if (hardMode.value == "NORMAL") {
+        hardMode.value = "BUSY";
+        hardMode.style.color = "blue"
+    } else {
+        hardMode.value = "NORMAL";
+        hardMode.style.color = "brown"
+    }
 }
 
 
 hardMode.addEventListener('click', hardModeActive);
 function hardModeActive() {
-  if (hardMode.value == "BUSY") {
-    hard = true;
-  } else {
-    hard = false;
-  }
+    if (hardMode.value == "BUSY") {
+        hard = true;
+    } else {
+        hard = false;
+    }
 };
 
 
 onButton.addEventListener('click', gameOn);
 function gameOn() {
-    console.log('GameOn')
-    if (onButton.value == "ON") {
-        on == true;
-        levelCounter.innerHTML = "<h3>Ready...start taking orders!</h3>";
+    if (onButton.value == 'ON') {
+        on = true;
+        console.log('GameOn')
+        levelCounter.innerHTML = "...Ready..start taking orders!...";
     } else {
-        on == false;
-        levelCounter.innerHTML = ""
+        on = false;
+        levelCounter.innerHTML = "...oven off..."
         clearBackground();
         clearInterval(levelInterval);
     }
 };
 
-startBtn.addEventListener('click', play)
+startBtn.addEventListener('click', function() {
+    if (on = true) {
+        play();
+         console.log('GameReady');
+    } else {
+        console.log('GameNotOn');
+        alert('turn on game to continue!')
+    }
+});
 
 function play() {
-    if(on == true){
-    win = false;
-    sequence = [];
-    playerSequence = [];
-    flash = 0;
-    levelInterval = 0;
-    level = 1;
-    levelCounter.innerHTML = 1;
-    good = true;
-    for (let i = 0; i < 20; i++) {
-        sequence.push(Math.floor(Math.random() * 4) + 1);
-    }
-    computerSequence = true;
+        console.log('GameStart')
+        win = false;
+        sequence = [];
+        playerSequence = [];
+        flash = 0;
+        levelInterval = 0;
+        level = 1;
+        levelCounter.innerHTML = 1;
+        good = true;
+        for (let i = 0; i < 20; i++) {
+            sequence.push(Math.floor(Math.random() * 4) + 1);
+        }
+        computerSequence = true;
 
-    levelInterval = setInterval(gameTurn, 800)
-}
-}
+        levelInterval = setInterval(gameTurn, 800)
+    }
+
 
 function gameTurn() {
     on = false;
@@ -97,11 +105,11 @@ function gameTurn() {
         clearBackground();
         on = true;
     }
-// Asigns the numbers 1-4 ,calls the function to flash the correct sequence of colours for the computer
+    // Asigns the numbers 1-4 ,calls the function to flash the correct sequence of colours for the computer
     if (computerSequence) {
         clearBackground();
-        setTimeout(function() {
-            if (sequence[flash] == 1) { 
+        setTimeout(function () {
+            if (sequence[flash] == 1) {
                 one();
             }
             if (sequence[flash] == 2) {
@@ -150,11 +158,11 @@ function flashColor() {
     bread.style.border = "thick solid pink";
     painAu.style.border = "thick solid pink";
     faCake.style.border = "thick solid pink";
-     if (on) {
-            setTimeout(function() {
-                clearColor();
-            }, 300);
-        }
+    if (on) {
+        setTimeout(function () {
+            clearColor();
+        }, 300);
+    }
 
 }
 function clearColor() {
@@ -165,52 +173,52 @@ function clearColor() {
 }
 
 
-cinRoll.addEventListener( 'click', function() {
-    if (on == true) {
+cinRoll.addEventListener('click', function () {
+    if (on = true) {
         playerSequence.push(1);
         checkAnswer();
         one();
         if (!win) {
-            setTimeout(function() {
+            setTimeout(function () {
                 clearBackground();
             }, 300);
         }
     }
 });
 
-bread.addEventListener('click', function() {
-    if (on == true) {
+bread.addEventListener('click', function () {
+    if (on = true) {
         playerSequence.push(2);
         checkAnswer();
         two();
         if (!win) {
-            setTimeout(function() {
+            setTimeout(function () {
                 clearBackground();
             }, 300);
         }
     }
 });
 
-painAu.addEventListener('click', function() {
-    if (on == true) {
+painAu.addEventListener('click', function () {
+    if (on = true) {
         playerSequence.push(3);
         checkAnswer();
         three();
         if (!win) {
-            setTimeout(function() {
+            setTimeout(function () {
                 clearBackground();
             }, 300);
         }
     }
 });
 
-faCake.addEventListener('click', function() {
-    if (on == true) {
+faCake.addEventListener('click', function () {
+    if (on = true) {
         playerSequence.push(4);
         checkAnswer();
         four();
         if (!win) {
-            setTimeout(function() {
+            setTimeout(function () {
                 clearBackground();
             }, 300);
         }
@@ -226,11 +234,11 @@ painAu.addEventListener('mouseleave', clearBackground);
 faCake.addEventListener('mouseenter', four);
 faCake.addEventListener('mouseleave', clearBackground);
 
-function checkAnswer(){
-    if(playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1])
-    good = false;
+function checkAnswer() {
+    if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1])
+        good = false;
 
-    else if(playerSequence.length == 20 && good) {
+    else if (playerSequence.length == 20 && good) {
         winGame();
     }
     playError();
@@ -238,25 +246,25 @@ function checkAnswer(){
 }
 
 function playError() {
-    if(good == false){
+    if (good == false) {
         flashColor();
-        levelCounter.innerHTML ="OH NO you made a mistake!";
-        setTimeout(function() {
+        levelCounter.innerHTML = "OH NO you made a mistake!";
+        setTimeout(function () {
             levelCounter.innerHTML = level;
-                clearBackground();
-              
-                if(hard) {
-                    play();
-                } else {
-                    computerSequence = true;
-                    flash = 0;
-                    playerSequence = [];
-                    good = true;
-                    levelInterval = setInterval(gameTurn, 800);
-                }
-                }, 200);
-        }
+            clearBackground();
+
+            if (hard) {
+                play();
+            } else {
+                computerSequence = true;
+                flash = 0;
+                playerSequence = [];
+                good = true;
+                levelInterval = setInterval(gameTurn, 800);
+            }
+        }, 200);
     }
+}
 
 
 function nextLevel() {

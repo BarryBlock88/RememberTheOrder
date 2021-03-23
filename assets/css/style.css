@@ -7,6 +7,13 @@ body, html {
 .diff-lvl h3{
     color: teal;
 }
+#onBtn{
+    padding: 10px 20px 10px 20px;
+}
+#difficulty{
+    padding: 10px;
+    margin-bottom: 20px;
+}
 
 .diff-lvl{
     font-size: 30px;
