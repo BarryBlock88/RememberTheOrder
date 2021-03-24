@@ -19,8 +19,9 @@ let faCake = document.getElementById('fairy-cake');
 
 let startBtn = document.getElementById('startbtn');
 let levelCounter = document.getElementById('score');
-let onButton = document.getElementById('onBtn')
-let hardMode = document.getElementById('difficulty')
+let onButton = document.getElementById('onBtn');
+let hardMode = document.getElementById('difficulty');
+
 
 function onButtonOn() {
     if (onButton.value == "OFF") {
@@ -62,10 +63,10 @@ function gameOn() {
     if (onButton.value == 'ON') {
         on = true;
         console.log('GameOn')
-        levelCounter.innerHTML = "...Ready..start taking orders!...";
+        $('#prompt').html("...Ready..start taking orders!...");
     } else {
         on = false;
-        levelCounter.innerHTML = "...oven off..."
+         $('#prompt').html("...oven off..."); 
         clearBackground();
         clearInterval(levelInterval);
     }
@@ -77,7 +78,7 @@ startBtn.addEventListener('click', function() {
          console.log('GameReady');
     } else {
         console.log('GameNotOn');
-        alert('turn on game to continue!')
+       $('#prompt').html("turn on Oven to continue!");
     }
 });
 
@@ -252,7 +253,7 @@ function checkAnswer() {
 function playError() {
     if (good == false) {
         flashColor();
-        levelCounter.innerHTML = "OH NO you made a mistake!";
+       $('#prompt').html("OH NO you made a mistake!");
         setTimeout(function () {
             levelCounter.innerHTML = level;
             clearBackground();
@@ -284,7 +285,7 @@ function nextLevel() {
 
 function winGame() {
     flashColor();
-    levelCounter.innerHTML = "You WON!"
+     $('#prompt').html("You WON the Game!"); 
     on = false;
     win = true;
 }

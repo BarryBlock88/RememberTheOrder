@@ -1,0 +1,94 @@
+.game-canvas {
+    background-image: url(/workspace/RememberTheOrder/assets/img/costumer_bread.png);
+    background-repeat: no-repeat;
+    size: cover;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+   text-align: center;
+  background-attachment: fixed;  
+  ;
+}
+
+
+.tile{
+    display: inline-block;
+    border: brown solid 1px;
+}
+
+ .start-game{
+     color: rgb(155, 88, 0);
+    background-color: burlywood;
+     font-size: 20px;
+   padding: 7px 15px 7px 15px;
+   margin-bottom: 10px;
+ }
+  .start-game:hover{
+     color: rgb(192, 149, 93);
+    background-color: rgb(6, 34, 34);
+    cursor: pointer;
+ }
+
+
+
+
+
+/*_____Game_buttons (for game play)______*/
+
+
+#cinnimon-roll {
+    position: relative;
+    width: 160px;
+    height: 160px;
+   background-image: url(/workspace/RememberTheOrder/assets/img/cinemon-roll.png);
+   background-size: contain;
+}
+
+#bread {
+    position: relative;
+     width: 160px;
+    height: 160px;
+    background-image: url(/workspace/RememberTheOrder/assets/img/bread_roll.png);
+     background-size: contain;
+  
+}
+
+#pain-au-chocolat{
+    position: relative;
+     width: 160px;
+    height: 160px;
+    background-image: url(/workspace/RememberTheOrder/assets/img/pain-au-chocolat.png);
+    background-size: contain;
+}
+#fairy-cake {
+position: relative;
+     width: 160px;
+    height: 160px;
+    background-image: url(/workspace/RememberTheOrder/assets/img/fairy-cake.png);
+    background-size: contain;
+}
+
+#fairy-cake:hover{
+    background-color: rgb(105, 237, 100);
+    cursor: pointer;
+    padding: 10px;
+}
+
+#bread:hover{
+    background-color: rgb(241, 16, 9);
+    cursor: pointer;
+    padding: 10px;
+}
+
+#pain-au-chocolat:hover{
+    background-color: rgb(221, 185, 64);
+    cursor: pointer;
+    padding: 10px;
+   
+}
+
+#cinnimon-roll:hover {
+    background-color: cornflowerblue;
+    cursor: pointer;
+    padding: 10px;
+}
