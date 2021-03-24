@@ -1,8 +1,15 @@
 body, html {
     background-color: rgb(212, 113, 19);
     color: burlywood;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
+}
 
+ul li {
+    list-style:upper-roman ;
+    font-size: 20px;
+    color: black;
+    padding: 5px;
 }
 .diff-lvl h3{
     color: teal;
@@ -22,25 +29,21 @@ body, html {
      padding: 10px;
      margin: auto;
 }
-#modal-btn{
+.Gbtn{
     color: rgb(211, 108, 11);
     background-color: burlywood;
     text-align: center;
     padding: 7px 20px 7px 20px;
+    
   
 
 }
-#modal-btn:hover{
+.Gbtn:hover{
     color: rgb(212, 146, 85);
     background-color: rgb(70, 51, 28);
 }
 
-.game_info_section{
-       
-    text-align: center;
-    margin: auto;
-    display: inline block;
-}
+
 .score h3{
     padding: 20px;
     font-size: 40px;
@@ -60,12 +63,11 @@ body, html {
 
 .game-area{
     padding: 10px;
+    margin: auto;
+    align-content: center;
 }
 /*_____Game_buttons______*/
-.col-6{
-    margin: auto;
-    padding: 10px;
-}
+
 
 #cinnimon-roll {
     position: relative;

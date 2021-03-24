@@ -26,19 +26,23 @@ function onButtonOn() {
     if (onButton.value == "OFF") {
         onButton.value = "ON";
         onButton.style.color = "blue"
+         $('#onBtn').html("ON")
 
     } else {
         onButton.value = "OFF";
         onButton.style.color = "red"
+        $('#onBtn').html("OFF")
     }
 }
 function hardModeBtn() {
     if (hardMode.value == "NORMAL") {
         hardMode.value = "BUSY";
         hardMode.style.color = "blue"
+          $('#difficulty').html("BUSY")
     } else {
         hardMode.value = "NORMAL";
         hardMode.style.color = "brown"
+          $('#difficulty').html("NORMAL")
     }
 }
 

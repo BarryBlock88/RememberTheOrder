@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Memory-Game</title>
 
@@ -23,8 +24,8 @@
                     <div class="row container-fluid">
                         <div class="col-6">
                             <h2>HEY THERE! <br> WANT A JOB?</h2>
-                            <button type="button" class="close" data-dismiss="modal" data-target="#modal-rules"
-                                data-toggle='modal' aria-label=""><span>Heck Yes!</span></button>
+                            <button type="button" class="close" data-dismiss="modal" aria-label=""><span>Heck
+                                    Yes!</span></button>
                         </div>
                         <div class="col-6">
                             <img src="assets/img/bread_boss1.png" alt="boss cartoon" class="img-fluid">
@@ -111,22 +112,30 @@
         </div>
     </div>
     <!-------game-status-info-section------->
-    <div class="game_info_section row">
-
+    <div class="game_info_section row container-fluid">
+        <div class="col-6 row">
+            <div class="col-6">
+                <button type="button" class="btn hide-button Gbtn shadow" id="difficulty" value="NORMAL" style="color: brown" onclick="hardModeBtn();">
+                NORMAL</button>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn hide-button Gbtn shadow" id="tutorial" value="TUTORIAL" 
+                        data-target="#modal-rules" data-toggle='modal'>TUTORIAL
+                </button>
+            </div>
+        </div>
+        <div class="col-6">
+        <div>
+            <h3>Level</h3>
+        </div>
+        <div id="score"> ...oven off...
+        </div>
+    </div>
 
     </div>
 
     <div class="row container-fluid">
         <div class="col-3">
-            <div class="row">
-                <div class="col-12">
-                    <form>
-                        <input type="button" id="difficulty" value="NORMAL" style="color: brown"
-                            onclick="hardModeBtn();">
-                    </form>
-                </div>
-            </div>
-
             <img src="assets/img/costumer_bread.png" alt="costumer cartoon" class="img-fluid">
         </div>
         <div class="game_area col-5">
@@ -159,31 +168,24 @@
         </div>
         <div class="col-3">
             <div class="col-12">
-                <h3>Level</h3>
-            </div>
-            <div id="score"> ...oven off...
-            </div>
-            <img src="assets/img/clipart-kitchen-animated-18.png" alt="oven" class="img-fluid">
-            <form>
-                <input type="button" id="onBtn" value="OFF" style="color: red" onclick="onButtonOn();">
-            </form>
+                <img src="assets/img/clipart-kitchen-animated-18.png" alt="oven" class="img-fluid">
+                <button type="button" class="btn hide-button start-game shadow" id="onBtn" value="OFF" style="color: red" onclick="onButtonOn();">
+                OFF</button>
 
+            </div>
         </div>
-    </div>
-    <div class="row box">
-        <div class="col-4"></div>
-        <div class="startbtn">
-            <button class="btn hide-button start-game col-4 startbtn" id="startbtn">Start Taking
-                Orders!</button>
+        <div class="row box">
+            <div class="col-4"></div>
+            <div class="startbtn">
+                <button class="btn hide-button start-game startbtn shadow" id="startbtn">Start Taking
+                    Orders!</button>
+            </div>
+            <div class="col-4"></div>
         </div>
-        <div class="col-4"></div>
-    </div>
     </div>
 
     <script type="text/javascript" src="assets/js/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+
     <script type="text/javascript">
         $(window).on('load', function () {
             $('#modal-boss').modal('show');
