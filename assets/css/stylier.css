@@ -1,5 +1,5 @@
 .game-canvas {
-    background-image: url(/workspace/RememberTheOrder/assets/img/costumer_bread.png);
+    background-image: url(../img/costumer_bread.png);
     background-repeat: no-repeat;
     size: cover;
     position: absolute;
@@ -12,7 +12,8 @@
 
 
 .tile{
-    display: inline-block;
+    display: inline-flex;
+    margin: auto;
     border: brown solid 1px;
 }
 
@@ -29,7 +30,9 @@
     cursor: pointer;
  }
 
-
+#prompt{
+    color: rgb(7, 7, 206);
+}
 
 
 
@@ -40,16 +43,18 @@
     position: relative;
     width: 160px;
     height: 160px;
-   background-image: url(/workspace/RememberTheOrder/assets/img/cinemon-roll.png);
+   background-image: url(../img/cinemon-roll.png);
    background-size: contain;
+   background-repeat: no-repeat;
 }
 
 #bread {
     position: relative;
      width: 160px;
     height: 160px;
-    background-image: url(/workspace/RememberTheOrder/assets/img/bread_roll.png);
+    background-image: url(../img/bread_roll.png);
      background-size: contain;
+      background-repeat: no-repeat;
   
 }
 
@@ -57,15 +62,17 @@
     position: relative;
      width: 160px;
     height: 160px;
-    background-image: url(/workspace/RememberTheOrder/assets/img/pain-au-chocolat.png);
+    background-image: url(../img/pain-au-chocolat.png);
     background-size: contain;
+     background-repeat: no-repeat;
 }
 #fairy-cake {
 position: relative;
      width: 160px;
     height: 160px;
-    background-image: url(/workspace/RememberTheOrder/assets/img/fairy-cake.png);
+    background-image: url(../img/fairy-cake.png);
     background-size: contain;
+     background-repeat: no-repeat;
 }
 
 #fairy-cake:hover{
