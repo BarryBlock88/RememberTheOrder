@@ -1,10 +1,14 @@
 body, html {
     background-color: rgb(212, 113, 19);
     color: burlywood;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: unset;
+    padding: unset;
     
 }
-
+.oven{
+    margin: 20px 0px 20px 0px ;
+}
 ul li {
     list-style:upper-roman ;
     font-size: 20px;
@@ -15,11 +19,11 @@ ul li {
     color: teal;
 }
 #onBtn{
-    padding: 10px 20px 10px 20px;
+    padding: 10px
 }
 #difficulty{
     padding: 10px;
-    margin-bottom: 20px;
+    
 }
 
 .diff-lvl{
@@ -33,8 +37,8 @@ ul li {
     color: rgb(211, 108, 11);
     background-color: burlywood;
     text-align: center;
-    padding: 7px 20px 7px 20px;
-    
+   margin-top: 20px;
+   padding: 4px 8px 4px 8px;
   
 
 }
@@ -51,8 +55,8 @@ ul li {
  .start-game{
      color: rgb(155, 88, 0);
     background-color: burlywood;
-     font-size: 30px;
-   padding: 7px 20px 7px 20px;
+     font-size: 20px;
+   padding: 7px 15px 7px 15px;
    margin-bottom: 10px;
  }
   .start-game:hover{
@@ -61,10 +65,12 @@ ul li {
     cursor: pointer;
  }
 
-.game-area{
-    padding: 10px;
-    margin: auto;
-    align-content: center;
+.game-area{ 
+    margin: auto; 
+}
+
+.game-info-section{
+    margin-bottom: 20px;
 }
 /*_____Game_buttons______*/
 
@@ -94,7 +100,6 @@ position: relative;
     height: 160px;
 }
 
-
 #fairy-cake:hover{
     background-color: rgb(105, 237, 100);
     cursor: pointer;
@@ -118,4 +123,44 @@ position: relative;
     background-color: cornflowerblue;
     cursor: pointer;
     padding: 10px;
+}
+
+
+/*-----grid-edit---*/
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+	position: relative;
+	width: 100%;
+	/* padding-right: 15px; */
+	/*padding-left: 15px; */
+}
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+	position: relative;
+	width: 100%;
+	/* padding-right: 15px; */
+	/* padding-left: 15px; */
+}
+.row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	/*margin-right: -15px;*/
+	/* margin-left: -15px; */
+}
+
+.row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	/* margin-right: -15px; */
+	/* margin-left: -15px; */
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+	width: 100%;
+	/* padding-right: 15px; */
+	/* padding-left: 15px; */
+	/*margin-right: auto;*/
+	margin-left: auto;
 }
