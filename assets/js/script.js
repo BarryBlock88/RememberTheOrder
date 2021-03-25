@@ -83,6 +83,7 @@ startBtn.addEventListener('click', function() {
 });
 
 function play() {
+     $('#prompt').html("...Keep an eye on the buns!...");
         console.log('GameStart')
         win = false;
         sequence = [];
@@ -102,6 +103,7 @@ function play() {
 
 
 function gameTurn() {
+     $('#prompt').html("...Keep an eye on the buns!...");
     on = false;
 
     if (flash == level) {
@@ -109,6 +111,7 @@ function gameTurn() {
         computerSequence = false;
         clearBackground();
         on = true;
+         $('#prompt').html("...Now your turn, do you remember!...");
     }
     // Asigns the numbers 1-4 ,calls the function to flash the correct sequence of colours for the computer
     if (computerSequence) {
