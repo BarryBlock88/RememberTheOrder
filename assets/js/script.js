@@ -304,3 +304,10 @@ function winGame() {
     on = false;
     win = true;
 }
+
+
+// from w3 schools
+function speechBubble() {
+  var popup = document.getElementById("gameBubble");
+  popup.classList.toggle("show");
+}

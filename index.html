@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/css/stylier.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
     <title>Remember the Order!</title>
 
 </head>
@@ -69,9 +69,45 @@
                     <button type="button" class="btn hide-button shadow otherbtn" id="difficulty" value="NORMAL"
                         style="color:#CCC5B9;" onclick="hardModeBtn();">
                         NORMAL</button>
-                    <button type="button" class="btn hide-button shadow otherbtn" id="tutorial" value="RULES"
-                        style="color:#CCC5B9;" data-target="#modal-rules" data-toggle='modal'>TUTORIAL
+                    <button type="button" class="btn hide-button shadow otherbtn popup" id="tutorial" value="RULES"
+                        style="color:#CCC5B9;" onclick="speechBubble()">TUTORIAL
                     </button>
+                    <div class="popup" onclick="speechBubble()"><span class="popuptext" id="gameBubble">
+                            <h4 class="">Rules of the Game:</h4>
+                            <div class="row">
+                                <ul class=" col-xs-11 col-md-4">
+                                    <li>This job is easy</li>
+                                    <li>just turn ON the oven</li>
+                                    <li>when it's READY</li>
+                                    <li>start taking orders </li>
+                                    <li>by clicking the button below</li>
+                                </ul>
+                                <ul class="col-xs-11 col-md-4" >
+                                    <li>Its your job</li>
+                                    <li> To remember the order of the cakes </li>
+                                    <li> After they are lit by there color</li>
+                                    <li>You must then click on the cake </li>
+
+                                </ul>
+                                <ul class="col-xs-11 col-md-4" >
+                                    <li> Each time you remember correctly </li>
+                                    <li>As the level increases </li>
+                                    <li>The items to remember will increase by +1 </li>
+
+                                    <li> Good Luck!</li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                 <div class="col-xs-4 col-md-4"></div>
+                                <div class="col-xs-2 col-md-4"><img src="assets/img/bread_boss1.png" alt="boss cartoon"
+                                        class="img-fluid"></div>
+                                <div class="col-xs-4 col-md-4"></div>
+                            </div>
+
+
+
+                        </span>
+                    </div>
                 </div>
 
                 <!-- Score -->
@@ -91,53 +127,17 @@
                     </div>
                 </div>
             </div>
-            <!-- Rules Modal -->
-            <div class="modal fade" id="modal-rules">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title ">Rules of the Game:</h4>
-                            <button type="button" class="close" data-dismiss="modal">x</button>
-                        </div>
-                        <div class="modal-body row" style="z-index: 1;">
-                            
-                            <ul >
-                                <li>This job is easy</li>
-                                <li>just turn ON the oven</li>
-                                <li>when it's READY</li>
-                                <li>start taking orders </li>
-                                <li>by clicking the button below</li>
-                            </ul>
-                            <ul>
-                                    <li>Its your job</li>
-                                    <li> To remember the order of the cakes </li>
-                                    <li> After they are lit by there color</li>
-                                    <li>You must then click on the cake </li>
-
-                                </ul>
-                                 <ul>
-                                    <li> Each time you remember correctly </li>
-                                    <li>As the level increases </li>
-                                    <li>The items to remember will increase by +1 </li>
-
-                                    <li> Good Luck!</li>
-                                </ul>
-                            <div class=" col-6">
-                                <img src="assets/img/bread_boss1.png" style="z-index: -1;" alt="boss cartoon"
-                                    class="img-fluid">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="close next btn " data-dismiss="modal"
-                                aria-label=""><span>Close</span></button>
-                        </div>
-
-                    </div>
-                </div>
+            <footer>
+                <div class="copyright row">
+            <div class="col-12 copyright-paragraph">
+                <p>_____</p>
+                <p>&copy; 2021 BarryBlock88 - Remember the Order</p>
             </div>
-
         </div>
-  
-        <script type="text/javascript" src="assets/js/script.js"></script>
+            </footer>
+
+
+
+            <script type="text/javascript" src="assets/js/script.js"></script>
 
 </body>
