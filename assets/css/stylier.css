@@ -1,6 +1,7 @@
 .game-canvas {
     background-image: url(../img/costumer_bread.png);
     background-repeat: no-repeat;
+    background-color: rgb(209, 140, 35);
     size: cover;
     position: absolute;
     z-index: -1;
@@ -16,7 +17,12 @@
     margin: auto;
     border: brown solid 1px;
 }
-
+#game-title{
+    color: beige;
+    font-weight: 600;
+    font-size: 35px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
  .start-game{
      color: rgb(155, 88, 0);
     background-color: burlywood;
@@ -31,7 +37,7 @@
  }
 
 #prompt{
-    color: rgb(7, 7, 206);
+    color: rgb(170, 206, 7);
 }
 
 
