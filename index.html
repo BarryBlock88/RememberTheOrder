@@ -26,32 +26,7 @@
                 </div>
             </div>
 
-            <div class="row" id="game-info">
-                <!-- Highscore -->
-                <div class="col-4">
-                    <!--<h6>Highscore</h6>
-                    <h5 id="high-score">0</h5>-->
-                      <button type="button" class="btn hide-button shadow" id="difficulty" value="NORMAL"
-                    style="color: brown" onclick="hardModeBtn();">
-                    NORMAL</button>
-                </div>
 
-                <!-- Score -->
-                <div class="col-4">
-                    <h6>Level</h6>
-                    <h5 id="score">0</h5>
-                </div>
-                <!-- Level -->
-                <div class="col-4">
-                   <!--<h6>Level</h6>
-                    <h5 id="level">1</h5>--> 
-                     <div class="col-12 d-flex justify-content-center">
-                        <button type="button" class="btn hide-button shadow" id="onBtn" value="OFF"
-                            style="color: red" onclick="onButtonOn();">
-                            OFF</button>
-                    </div>
-                </div>
-            </div>
 
             <!-- Start Game Button -->
             <div class="row">
@@ -70,45 +45,145 @@
                         <div class="container-fluid game-tile-area">
                             <div class="row box-display justify-content-center">
                                 <div class="col-8-sm  justify-content-center">
-                                    <div class="tile justify-content-center" id="cinnimon-roll" ></div>
-                                    <div class="tile justify-content-center" id="bread" ></div>
+                                    <div class="tile justify-content-center" id="cinnimon-roll"></div>
+                                    <div class="tile justify-content-center" id="bread"></div>
                                 </div>
                             </div>
                             <div class="row box-display justify-content-center">
                                 <div class="col-8-sm justify-content-center">
-                                    <div class="tile justify-content-center" id="pain-au-chocolat" ></div>
-                                    <div class="tile justify-content-center" id="fairy-cake" ></div>
+                                    <div class="tile justify-content-center" id="pain-au-chocolat"></div>
+                                    <div class="tile justify-content-center" id="fairy-cake"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="row" id="game-info">
+                <!-- Highscore -->
+                <div class="col-4">
+                    <!--<h6>Highscore</h6>
+                    <h5 id="high-score">0</h5>-->
+                    <button type="button" class="btn hide-button shadow otherbtn" id="difficulty" value="NORMAL"
+                        style="color: brown" onclick="hardModeBtn();">
+                        NORMAL</button>
+                        <button type="button" class="btn hide-button shadow otherbtn" id="tutorial" value="TUTORIAL"
+                        data-target="" data-toggle='modal'>TUTORIAL
+                    </button>
+                </div>
 
-    <div class="modal" id="modal-boss" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="row container-fluid">
-                        <div class="col-6">
-                            <h2>HEY THERE! <br> WANT A JOB?</h2>
-                            <button type="button" class="close btn btn-light" data-dismiss="modal" aria-label=""><span>Heck
-                                    Yes!</span></button>
-                        </div>
-                        <div class="col-6">
-                            <img src="assets/img/bread_boss1.png" alt="boss cartoon" class="img-fluid">
-                        </div>
+                <!-- Score -->
+                <div class="col-4">
+                    <h6>Level</h6>
+                    <h5 id="score">0</h5>
+                </div>
+                <!-- Tutorial -->
+                <div class="col-4">
+                    
+                    <!--<h6>Level</h6>
+                    <h5 id="level">1</h5>-->
+                    <div class="col-12 d-flex justify-content-center">
+                        <button type="button" class="btn hide-button shadow otherbtn" id="onBtn" value="OFF"
+                            style="color: red" onclick="onButtonOn();">
+                            OFF</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal-boss" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row container-fluid">
+                            <div class="col-6">
+                                <h2>HEY THERE! <br> WANT A JOB?</h2>
+                                <br>
+                                <button type="button" class="close btn shadow data-dismiss="modal" aria-label=""><span>Heck
+                                        Yes!</span></button>
+                            </div>
+                            <div class="col-6">
+                                <img src="assets/img/bread_boss1.png" alt="boss cartoon" class="img-fluid">
+                            </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-  <script type="text/javascript" src="assets/js/script.js"></script>
+        <div class="modal" id="modal-rules" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row container-fluid">
+                            <div class="col-6">
+                                <ul>
+                                    <li>This job is easy</li>
+                                    <li>just turn ON the oven</li>
+                                    <li>when it's READY</li>
+                                    <li>start taking orders </li>
+                                    <li>by clicking the button below</li>
+                                </ul>
+                                <button type="button" class="close next" data-dismiss="modal" data-target="#modal-rules2"
+                                    data-toggle='modal' aria-label=""><span>Next</span></button>
+                            </div>
+                            <div class="col-6">
+                                <img src="assets/img/bread_boss1.png" alt="boss cartoon" class="img-fluid">
+                            </div>
 
-    <!--<script type="text/javascript">
-        $(window).on('load', function () {
-            $('#modal-boss').modal('show');
-        });
-    </script>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal-rules2" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row container-fluid">
+                            <div class="col-6">
+                                <ul>
+                                    <li>Its your job</li>
+                                    <li> To remember the order of the cakes </li>
+                                    <li> After they are lit by there color</li>
+                                    <li>You must then click on the cake </li>
+
+                                </ul>
+                                <button type="button" class="close next" data-dismiss="modal" data-target="#modal-rules3"
+                                    data-toggle='modal' aria-label=""><span>Next</span></button>
+                            </div>
+                            <div class="col-6">
+                                <img src="assets/img/bread_boss1.png" alt="boss cartoon" class="img-fluid">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal-rules3" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row container-fluid">
+                            <div class="col-6">
+                                <ul>
+                                    <li> Each time you remember correctly </li>
+                                    <li>As the level increases </li>
+                                    <li>The items to remember will increase by +1 </li>
+
+                                    <li> Good Luck!</li>
+                                </ul>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-label=""><span>Bake</span></button>
+                            </div>
+                            <div class="col-6">
+                                <img src="assets/img/bread_boss1.png" alt="boss cartoon" class="img-fluid">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="assets/js/script.js"></script>
+
 </body>

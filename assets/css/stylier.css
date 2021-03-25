@@ -1,10 +1,10 @@
 .game-canvas {
-    background-image: url(../img/costumer_bread.png);
+    background-image: url(../img/costumer_breadopac.png);
     background-repeat: no-repeat;
     background-color: rgb(209, 140, 35);
     size: cover;
-    position: absolute;
-    z-index: -1;
+    position: fixed;
+   z-index: -2;
     width: 100%;
    text-align: center;
   background-attachment: fixed;  
@@ -37,7 +37,11 @@
  }
 
 #prompt{
-    color: rgb(29, 71, 5);
+    color: rgb(4, 0, 214);
+}
+.otherbtn{
+    background-color: chocolate;
+    font-weight: bold;
 }
 
 

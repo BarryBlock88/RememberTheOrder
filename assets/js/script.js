@@ -10,6 +10,14 @@ let on = false;
 let hard = false;
 let win;
 
+$(window).on('load', function(){
+$('#modal-boss').show('modal')        
+});
+$('.close').on('click', function(){
+  $('#modal-boss').hide('modal'); 
+});
+
+
 
 let bread = document.getElementById('bread');
 let cinRoll = document.getElementById('cinnimon-roll');
@@ -159,6 +167,10 @@ function clearBackground() {
     bread.style.backgroundColor = "transparent";
     painAu.style.backgroundColor = "transparent";
     faCake.style.backgroundColor = "transparent";
+    cinRoll.style.border = " brown solid 1px";
+    bread.style.border = " brown solid 1px";
+    painAu.style.border = " brown solid 1px";
+    faCake.style.border = " brown solid 1px";
 }
 
 function flashColor() {
