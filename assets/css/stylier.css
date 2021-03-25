@@ -1,46 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+
+
+
 .game-canvas {
     background-image: url(../img/costumer_breadopac.png);
     background-repeat: no-repeat;
-    background-color: rgb(209, 140, 35);
+    background-color: #EB5E28;
     size: cover;
     position: fixed;
    z-index: -2;
     width: 100%;
    text-align: center;
   background-attachment: fixed;  
-  ;
+  font-family: 'New Tegomin', serif;
 }
 
 
 .tile{
     display: inline-flex;
     margin: auto;
-    border: brown solid 1px;
+    border: #252422 solid 1px;
 }
 #game-title{
-    color: beige;
+    color: #252422;
     font-weight: 600;
     font-size: 35px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+  
 }
  .start-game{
-     color: rgb(155, 88, 0);
-    background-color: burlywood;
+     color:#403D39;
+    background-color: #FFFCF2;
      font-size: 20px;
    padding: 7px 15px 7px 15px;
    margin-bottom: 10px;
  }
   .start-game:hover{
-     color: rgb(192, 149, 93);
-    background-color: rgb(6, 34, 34);
+      color:#CCC5B9;
+    background-color: #403D39;
     cursor: pointer;
  }
 
 #prompt{
-    color: rgb(4, 0, 214);
+    color: #252422;
 }
 .otherbtn{
-    background-color: chocolate;
+    background-color: #252422;
     font-weight: bold;
 }
 
@@ -86,26 +92,26 @@ position: relative;
 }
 
 #fairy-cake:hover{
-    background-color: rgb(105, 237, 100);
+    background-color: rgba(105, 237, 100, 0.5);
     cursor: pointer;
     padding: 10px;
 }
 
 #bread:hover{
-    background-color: rgb(241, 16, 9);
+    background-color: rgba(241, 17, 9, 0.5);
     cursor: pointer;
     padding: 10px;
 }
 
 #pain-au-chocolat:hover{
-    background-color: rgb(221, 185, 64);
+    background-color: rgb(221, 185, 64, 0.5);
     cursor: pointer;
     padding: 10px;
    
 }
 
 #cinnimon-roll:hover {
-    background-color: cornflowerblue;
+    background-color: rgb(100, 149, 237, 0.5);
     cursor: pointer;
     padding: 10px;
 }
