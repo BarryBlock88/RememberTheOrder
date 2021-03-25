@@ -1,7 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
 
-
+body{
+    background-color: #EB5E28;
+}
 
 
 .game-canvas {
@@ -119,6 +121,16 @@ position: relative;
 /*_____anime___*/
  
 
+.animateBun{
+    transform:scale(1,1);
+animation: bun 0.5s forwards ease-in-out;
+}
+
+@keyframes bun{
+    0% {transform:scale(1,1)}
+    75%{transform:scale(1.2,1.2)}
+    100%{transform:scale(1,1)}
+}
 
 
 /*_______EXPERIMENTial from W3 schools__*/

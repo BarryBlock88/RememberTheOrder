@@ -77,11 +77,12 @@ function gameOn() {
          $('#prompt').html("...oven off..."); 
         clearBackground();
         clearInterval(levelInterval);
+         levelCounter.innerHTML = 0;
     }
 };
 
 startBtn.addEventListener('click', function() {
-    if (on = true) {
+    if (on == true) {
         play();
          console.log('GameReady');
     } else {
@@ -130,6 +131,7 @@ function gameTurn() {
             }
             if (sequence[flash] == 2) {
                 two();
+   
             }
             if (sequence[flash] == 3) {
                 three();
@@ -149,7 +151,8 @@ function one() {
 
 function two() {
     bread.style.backgroundColor = "rgb(241, 16, 9)";
-};
+   
+}
 
 
 function three() {
@@ -174,11 +177,12 @@ function clearBackground() {
 }
 
 function flashColor() {
-    cinRoll.style.border = "thick solid pink";
-    bread.style.border = "thick solid pink";
-    painAu.style.border = "thick solid pink";
-    faCake.style.border = "thick solid pink";
-    if (on) {
+    cinRoll.style.border = "brown solid 1px";
+    bread.style.border = "brown solid 1px";
+    painAu.style.border = "brown solid 1px";
+    faCake.style.border = "brown solid 1px";
+     $('.game-tile-area').addClass('animateBun',500);
+    if (on == true) {
         setTimeout(function () {
             clearColor();
         }, 300);
@@ -190,6 +194,7 @@ function clearColor() {
     bread.style.border = "none";
     painAu.style.border = "none";
     faCake.style.border = "none";
+     $('.game-tile-area').removeClass('animateBun',500);
 }
 
 
