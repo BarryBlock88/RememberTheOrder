@@ -1,14 +1,15 @@
 
-@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+/*______________________________________General styling____*/
 
 body, html {
     margin: 0;
     padding: 0;
     background-color: #EB5E28;
-    width:100vh;
+    font-family: 'VT323', monospace;
 }
-
+/*__________________________________________Main game area_____*/
 
 .game-canvas {
     background-image: url(../img/costumer_breadopac.png);
@@ -20,25 +21,26 @@ body, html {
     width: 100%;
    text-align: center;
   background-attachment: fixed;  
-  font-family: 'New Tegomin', serif;
 }
 
-
+/*____________________________________________________Game tiles styling___*/
 .tile{
     display: inline-flex;
     margin: auto;
     border: #252422 solid 1px;
 }
+
+/*____________________________________________________Main heading___*/
 .main-heading{
     color: #252422;
     font-weight: bold;
-    font-size: 35px;
   
 }
+
+/*____________________________________________________Start game Button___*/
  .start-game{
      color:#403D39;
     background-color: #FFFCF2;
-     font-size: 20px;
    padding: 7px 15px 7px 15px;
    margin-bottom: 10px;
  }
@@ -47,10 +49,12 @@ body, html {
     background-color: #403D39;
     cursor: pointer;
  }
-
+/*____________________________________________________Message prompter (User instruction)___*/
 #prompt{
     color: #252422;
 }
+
+/*______________________________________________________________Non-main buttons____*/
 .otherbtn{
     background-color: #252422;
     font-weight: bold;
@@ -58,7 +62,7 @@ body, html {
 
 
 
-/*_____Game_buttons (for game play)______*/
+/*_____________________________________________________________________GAME BUN BUTTONS (tiles for game play)______*/
 
 
 #cinnimon-roll {
@@ -97,6 +101,7 @@ position: relative;
      background-repeat: no-repeat;
 }
 
+ /* __________________________________________________________Tile hover________ */
 #fairy-cake:hover{
     background-color: rgba(105, 237, 100, 0.5);
     cursor: pointer;
@@ -122,33 +127,18 @@ position: relative;
     padding: 10px;
     
 }
-/*_____anime___*/
- 
 
-.animateBun{
-    transform:scale(1,1);
-animation: bun 0.5s forwards ease-in-out;
-}
-
-@keyframes bun{
-    0% {transform:scale(1,1)}
-    75%{transform:scale(1.2,1.2)}
-    100%{transform:scale(1,1)}
-}
-
-
-/*_______https://www.w3schools.com/howto/howto_js_popup.asp - from W3 schools__*/
-
- /* Popup container */
+/*_______________________________________https://www.w3schools.com/howto/howto_js_popup.asp - from W3 schools__*/
+/*_____________________________________________________________________________POPUP____________________*/
+ /* _____________________Popup container */
 .popup {
   position: relative;
   display: inline-block;
   cursor: pointer;
 }
 
-/* The actual popup (appears on top) */
+/* _______________Tutorial popup */
 .popup .popuptext {
-    font-size: 20px;
      visibility: hidden;
   width: 80vw;
   height: 80vh;
@@ -164,14 +154,14 @@ animation: bun 0.5s forwards ease-in-out;
   margin-left: -80px;
 }
 
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
+/* _____________________Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s forwards;
   animation: fadeIn 1s forwards;
 }
-
-/* Add animation (fade in the popup) */
+/*_____________________________________________________________________________ANIMATION____________________*/
+/* ___________________________Animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -181,15 +171,151 @@ animation: bun 0.5s forwards ease-in-out;
   from {opacity: 0;}
   to {opacity:1 ;}
 } 
+/*_____________________-animation (when error)___*/
+ 
 
-@media(max-width: 576px),(max-width: 767px){
+.animateBun{
+    transform:scale(1,1);
+animation: bun 0.5s forwards ease-in-out;
+}
+
+@keyframes bun{
+    0% {transform:scale(1,1)}
+    75%{transform:scale(1.2,1.2)}
+    100%{transform:scale(1,1)}
+}
+
+
+
+/*_____________________________________________________________________________RESPONISIVENESS____________________*/
+
+
+  @media(min-width: 900px)  {/*______________for laptops and desktops___*/
+
+/*____________________________________________________Main heading___*/
+.main-heading{
+    font-size: 48px;
+}
+
+/*____________________________________________________Start game Button___*/
+ .start-game{ 
+     font-size: 30px;
+ 
+ }
+    /*______________________________________________________________Non-main buttons___*/
+.otherbtn{
+   font-size: 25px;}
+    /*______________________________________________________________level text____*/
+#level{
+     font-size: 30px;
+}
+/*____________________________________________________Message prompter___*/
+#prompt{
+    color: #252422;
+    font-size: 30px;
+}
+/* _______________Tutorial popup font size */
 .popup .popuptext {
-        font-size: 11px;
+        font-size: 25px;
     }
 
 }
-  @media(max-width: 320px)  {
-    /*_____Game_buttons (for small screen)______*/
+  
+
+
+
+
+  @media(min-width: 360px)  {/*______________for tablets and medium sized devices___*/
+
+     /*______________Main heading___*/
+.main-heading{
+    font-size: 40px;
+}
+
+/*________________________Start game Button___*/
+ .start-game{ 
+     font-size: 24px;
+ 
+ }
+    /*______________Non-main buttons____*/
+.otherbtn{
+   font-size: 18px;}
+    /*______________________level text____*/
+#level{
+     font-size: 23px;
+}
+/*_____________Message prompter___*/
+#prompt{
+    color: #252422;
+    font-size: 27px;
+}
+/* _______________Tutorial popup font size */
+.popup .popuptext {
+        font-size: 18px;
+    }
+
+ }
+  @media(max-width: 768px){
+ /*____________Game_buttons (for tablets screen)______*/
+
+#cinnimon-roll {
+    width: 140px;
+    height: 140px;
+}
+
+#bread {
+   
+     width: 140px;
+    height: 140px;
+   
+  
+}
+
+#pain-au-chocolat{
+   
+     width: 140px;
+    height: 140px;
+  
+}
+#fairy-cake {
+
+     width: 140px;
+    height: 140px;
+
+}
+/* _______________Tutorial popup font size */
+.popup .popuptext {
+        font-size: 11px;
+    }
+}
+
+
+ 
+  @media(max-width: 325px){/*______________________for small mobile devices___*/
+
+/*___________Main heading___*/
+.main-heading{
+    font-size: 35px;
+}
+
+/*_______________Start game Button___*/
+ .start-game{ 
+     font-size: 20px;
+ 
+ }
+    /*________________Non-main buttons____*/
+.otherbtn{
+   font-size: 14px;}
+    /*________________level text____*/
+#level{
+     font-size: 20px;
+}
+/*______________Message prompter ___*/
+#prompt{
+    font-size: 20px;
+}
+
+  /*_____________Game_buttons ______*/
 
 #cinnimon-roll {
     width: 120px;
@@ -216,5 +342,14 @@ animation: bun 0.5s forwards ease-in-out;
     height: 120px;
 
 }
+/* _______________Tutorial popup font size */
+.popup .popuptext {
+        font-size: 9px;
+    }
+
 }
 
+
+
+
+ 

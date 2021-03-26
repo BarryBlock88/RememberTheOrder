@@ -26,7 +26,7 @@ let faCake = document.getElementById('fairy-cake');
 
 
 let startBtn = document.getElementById('startbtn');
-let levelCounter = document.getElementById('score');
+let levelCounter = document.getElementById('level');
 let onButton = document.getElementById('onBtn');
 let hardMode = document.getElementById('difficulty');
 

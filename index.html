@@ -11,25 +11,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/css/stylier.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+   
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
     <title>Remember the Order!</title>
 
 </head>
 
 <body>
+    
 
     <div class="game-canvas d-flex justify-content-center">
-        <div class="container-fluid">
-            <!-- Title -->
+       <div class="container-fluid">
+            <!--Game main heading -->
             <div class="row">
                 <div class="col-12">
                     <h1 class="main-heading">Remember the Order!</h1>
                 </div>
             </div>
-
-
-
             <!-- Start Game Button -->
             <div class="row">
                 <div class="col-12">
@@ -37,7 +36,7 @@
                 </div>
             </div>
 
-            <!-- Prompt -->
+            <!-- Prompter -->
             <h3 class="justify-content-center" id="prompt">Click OFF/ON button to begin!</h3>
 
             <!-- Game Buttons - 4 tiles -->
@@ -62,16 +61,16 @@
                 </div>
             </div>
             <div class="row" id="game-info">
-                <!-- Highscore -->
+                <!-- Hard-mode -->
                 <div class="col-4">
-                    <!--<h6>Highscore</h6>
-                    <h5 id="high-score">0</h5>-->
                     <button type="button" class="btn hide-button shadow otherbtn" id="difficulty" value="NORMAL"
                         style="color:#CCC5B9;" onclick="hardModeBtn();">
                         NORMAL</button>
+                         <!-- Tutorial -->
                     <button type="button" class="btn hide-button shadow otherbtn popup" id="tutorial" value="RULES"
                         style="color:#CCC5B9;" onclick="speechBubble()">TUTORIAL
                     </button>
+                     <!-- Tutorial-rules-popupBubble -->
                     <div class="popup" onclick="speechBubble()"><span class="popuptext" id="gameBubble">
                             <h4 class="">Rules of the Game:</h4>
                             <div class="row">
@@ -110,16 +109,13 @@
                     </div>
                 </div>
 
-                <!-- Score -->
+                <!-- Level - counter -->
                 <div class="col-4">
                     <h3>Level</h3>
-                    <h3 id="score">0</h3>
+                    <h3 id="level">0</h3>
                 </div>
-                <!-- Tutorial -->
                 <div class="col-4">
-
-                    <!--<h6>Level</h6>
-                    <h5 id="level">1</h5>-->
+                <!----on/off---->
                     <div class="col-12 d-flex justify-content-center">
                         <button type="button" class=" btn hide-button shadow otherbtn" id="onBtn" value="OFF"
                             style="color: red" onclick="onButtonOn();">
@@ -128,6 +124,7 @@
                     </div>
                 </div>
             </div>
+            <!----Footer-->
             <footer>
                 <div class="copyright row">
             <div class="col-12">
