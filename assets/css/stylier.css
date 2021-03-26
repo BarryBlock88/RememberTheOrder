@@ -186,5 +186,35 @@ animation: bun 0.5s forwards ease-in-out;
 .popup .popuptext {
         font-size: 11px;
     }
+
+}
+  @media(max-width: 320px)  {
+    /*_____Game_buttons (for small screen)______*/
+
+#cinnimon-roll {
+    width: 120px;
+    height: 120px;
+}
+
+#bread {
+   
+     width: 120px;
+    height: 120px;
+   
+  
+}
+
+#pain-au-chocolat{
+   
+     width: 120px;
+    height: 120px;
+  
+}
+#fairy-cake {
+
+     width: 120px;
+    height: 120px;
+
+}
 }
 
