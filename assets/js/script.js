@@ -31,16 +31,16 @@ let onButton = document.getElementById('onBtn');
 let hardMode = document.getElementById('difficulty');
 
 
+
 function onButtonOn() {
     if (onButton.value == "OFF") {
         onButton.value = "ON";
         onButton.style.color = "blue"
          $('#onBtn').html("ON")
-
     } else {
         onButton.value = "OFF";
         onButton.style.color = "red"
-        $('#onBtn').html("OFF")
+        $('#onBtn').html("OFF")     
     }
 }
 function hardModeBtn() {
@@ -74,7 +74,7 @@ function gameOn() {
         $('#prompt').html("...Ready..start taking orders!...");
     } else {
         on = false;
-         $('#prompt').html("...oven off..."); 
+         $('#prompt').html("...Game is off..."); 
         clearBackground();
         clearInterval(levelInterval);
          levelCounter.innerHTML = 0;
@@ -87,12 +87,12 @@ startBtn.addEventListener('click', function() {
          console.log('GameReady');
     } else {
         console.log('GameNotOn');
-       $('#prompt').html("turn on Oven to continue!");
+       $('#prompt').html("turn ON to continue!");
     }
 });
 
 function play() {
-     $('#prompt').html("...Keep an eye on the buns!...");
+    
         console.log('GameStart')
         win = false;
         sequence = [];

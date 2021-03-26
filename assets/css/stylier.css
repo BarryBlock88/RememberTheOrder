@@ -1,8 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
 
-body{
+
+body, html {
+    margin: 0;
+    padding: 0;
     background-color: #EB5E28;
+    width:100vh;
 }
 
 
@@ -25,9 +29,9 @@ body{
     margin: auto;
     border: #252422 solid 1px;
 }
-#game-title{
+.main-heading{
     color: #252422;
-    font-weight: 600;
+    font-weight: bold;
     font-size: 35px;
   
 }
@@ -133,7 +137,7 @@ animation: bun 0.5s forwards ease-in-out;
 }
 
 
-/*_______EXPERIMENTial from W3 schools__*/
+/*_______https://www.w3schools.com/howto/howto_js_popup.asp - from W3 schools__*/
 
  /* Popup container */
 .popup {
