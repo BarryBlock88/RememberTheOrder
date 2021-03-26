@@ -8,15 +8,17 @@ body, html {
     padding: 0;
     background-color: #EB5E28;
     font-family: 'VT323', monospace;
+     background-image: url(../img/costumer_breadopac.png);
+        size: cover;
+           background-repeat: no-repeat;
+    position: fixed;
+    width: 100%;
 }
 /*__________________________________________Main game area_____*/
 
 .game-canvas {
-    background-image: url(../img/costumer_breadopac.png);
-    background-repeat: no-repeat;
-    background-color: #EB5E28;
-    size: cover;
-    position: fixed;
+ 
+    background-color: transparent;
    z-index: -2;
     width: 100%;
    text-align: center;
@@ -139,9 +141,10 @@ position: relative;
 
 /* _______________Tutorial popup */
 .popup .popuptext {
+    font-size: 11px;
      visibility: hidden;
-  width: 80vw;
-  height: 80vh;
+  width: 70vw;
+    height: 70vh;
   background-color: #403D39;
   color: #fff;
   text-align: center;
@@ -190,42 +193,48 @@ animation: bun 0.5s forwards ease-in-out;
 /*_____________________________________________________________________________RESPONISIVENESS____________________*/
 
 
-  @media(min-width: 900px)  {/*______________for laptops and desktops___*/
+  @media(max-width: 801px), (min-width: 1281px)  {/*_______________________for laptops and desktops___*/
 
-/*____________________________________________________Main heading___*/
+/*________Main heading___*/
 .main-heading{
     font-size: 48px;
 }
 
-/*____________________________________________________Start game Button___*/
+/*_________________________Start game Button___*/
  .start-game{ 
      font-size: 30px;
  
  }
-    /*______________________________________________________________Non-main buttons___*/
+    /*_________________Non-main buttons___*/
 .otherbtn{
    font-size: 25px;}
-    /*______________________________________________________________level text____*/
+    /*___________________level text____*/
 #level{
      font-size: 30px;
 }
-/*____________________________________________________Message prompter___*/
+/*__________________Message prompter___*/
 #prompt{
-    color: #252422;
+   
     font-size: 30px;
 }
 /* _______________Tutorial popup font size */
 .popup .popuptext {
-        font-size: 25px;
+        font-size: 18px;
+         height: 50vh;
     }
 
 }
-  
+  @media(min-width: 800px),(min-width: 768px){
+/* _______________Tutorial popup font size */
+.popup .popuptext {
+        font-size: 12px;
+          height: unset;
+    }
+  }
 
 
+  @media(min-width: 414px),(max-width: 768px){/*______________for tablets and medium sized devices___*/
 
-
-  @media(min-width: 360px)  {/*______________for tablets and medium sized devices___*/
 
      /*______________Main heading___*/
 .main-heading{
@@ -251,12 +260,12 @@ animation: bun 0.5s forwards ease-in-out;
 }
 /* _______________Tutorial popup font size */
 .popup .popuptext {
-        font-size: 18px;
+        font-size: 12px;
+         
     }
 
  }
-  @media(max-width: 768px){
- /*____________Game_buttons (for tablets screen)______*/
+  @media (min-width: 414px),(max-width: 768px){ /*____________Game_buttons (for tablets screen)______*/
 
 #cinnimon-roll {
     width: 140px;
@@ -283,11 +292,7 @@ animation: bun 0.5s forwards ease-in-out;
     height: 140px;
 
 }
-/* _______________Tutorial popup font size */
-.popup .popuptext {
-        font-size: 11px;
-    }
-}
+  }
 
 
  
