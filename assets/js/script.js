@@ -35,22 +35,22 @@ let hardMode = document.getElementById('difficulty');
 function onButtonOn() {
     if (onButton.value == "OFF") {
         onButton.value = "ON";
-        onButton.style.color = "blue"
+        onButton.style.color = "rgb(17, 212, 226)"
          $('#onBtn').html("ON")
     } else {
         onButton.value = "OFF";
-        onButton.style.color = "red"
+        onButton.style.color = "#CCC5B9"
         $('#onBtn').html("OFF")     
     }
 }
 function hardModeBtn() {
     if (hardMode.value == "NORMAL") {
         hardMode.value = "BUSY";
-        hardMode.style.color = "blue"
+        hardMode.style.color = "rgb(17, 212, 226)"
           $('#difficulty').html("BUSY")
     } else {
         hardMode.value = "NORMAL";
-        hardMode.style.color = "brown"
+        hardMode.style.color = "#CCC5B9"
           $('#difficulty').html("NORMAL")
     }
 }
@@ -150,7 +150,7 @@ function one() {
 };
 
 function two() {
-    bread.style.backgroundColor = "rgb(241, 16, 9)";
+    bread.style.backgroundColor = "#ff69b4";
    
 }
 

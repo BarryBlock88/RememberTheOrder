@@ -267,6 +267,8 @@ animation: bun 0.5s forwards ease-in-out;
  }
   @media (min-width: 414px),(max-width: 768px){ /*____________Game_buttons (for tablets screen)______*/
 
+
+
 #cinnimon-roll {
     width: 140px;
     height: 140px;
@@ -297,6 +299,7 @@ animation: bun 0.5s forwards ease-in-out;
 
  
   @media(max-width: 325px){/*______________________for small mobile devices___*/
+
 
 /*___________Main heading___*/
 .main-heading{
