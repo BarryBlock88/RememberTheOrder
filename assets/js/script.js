@@ -14,7 +14,6 @@ let audio1 = document.getElementById('btn-audio1');
 let audio2 = document.getElementById('btn-audio2');
 let audio3 = document.getElementById('btn-audio3');
 let audio4 = document.getElementById('btn-audio4');
-let allAudio = {audio1, audio2, audio3, audio4};
 
 let bread = document.getElementById('bread');
 let cinRoll = document.getElementById('cinnimon-roll');
@@ -140,7 +139,7 @@ function gameTurn() {
                 audio4.play();
             }
             flash++;
-        }, 200);
+        }, 400);
     }
 
 }
@@ -206,7 +205,7 @@ cinRoll.addEventListener('click', function () {
         if (!win) {
             setTimeout(function () {
                 clearBackground();
-            }, 300);
+            }, 200);
         }
     }
 });
@@ -220,7 +219,7 @@ bread.addEventListener('click', function () {
         if (!win) {
             setTimeout(function () {
                 clearBackground();
-            }, 300);
+            }, 200);
         }
     }
 });
@@ -234,7 +233,7 @@ painAu.addEventListener('click', function () {
         if (!win) {
             setTimeout(function () {
                 clearBackground();
-            }, 300);
+            }, 200);
         }
     }
 });
@@ -248,7 +247,7 @@ faCake.addEventListener('click', function () {
         if (!win) {
             setTimeout(function () {
                 clearBackground();
-            }, 300);
+            }, 200);
         }
     }
 });
@@ -276,7 +275,6 @@ function checkAnswer() {
 function playError() {
     if (good == false) {
         flashColor();
-        allAudio.play();
         $('#prompt').html("OH NO you made a mistake!");
         setTimeout(function () {
             levelCounter.innerHTML = level;
