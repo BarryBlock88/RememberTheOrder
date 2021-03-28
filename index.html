@@ -11,18 +11,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/css/stylier.css">
-   
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <title>Remember the Order!</title>
 
 </head>
 
 <body>
-    
+
 
     <div class="game-canvas d-flex justify-content-center">
-       <div class="container-fluid">
+        <div class="container-fluid">
             <!--Game main heading -->
             <div class="row">
                 <div class="col-12">
@@ -62,17 +62,18 @@
             </div>
             <div class="row" id="game-info">
                 <div class="col-md-4 col-sm-12 col-xs-12">
-                         <!-- Tutorial -->
+                    <!-- Tutorial -->
                     <button type="button" class="btn hide-button shadow otherbtn popup" id="tutorial" value="RULES"
                         style="color:#CCC5B9;" onclick="speechBubble()">TUTORIAL
                     </button>
-                     <!-- Hard-mode -->
+                    <!-- Hard-mode -->
                     <button type="button" class="btn hide-button shadow otherbtn" id="difficulty" value="NORMAL"
                         style="color:#CCC5B9;" onclick="hardModeBtn();">
                         NORMAL</button>
-                     <!-- Tutorial-rules-popupBubble -->
-                    <div class="popup" onclick="speechBubble()"><span class="popuptext" id="gameBubble">
-                            <h4 class="">Rules of the Game:</h4>
+                    <!-- Tutorial-rules-popupBubble -->
+                    <div class="popup" onclick="speechBubble()">
+                        <div class="popuptext" id="gameBubble">
+                            <h4>Rules of the Game:</h4>
                             <div class="row">
                                 <ul class=" col-xs-11 col-sm-12 col-md-4">
                                     <li>This job is easy</li>
@@ -81,23 +82,22 @@
                                     <li>start taking orders </li>
                                     <li>by clicking the button below</li>
                                 </ul>
-                                <ul class="col-xs-11 col-sm-12 col-md-4" >
+                                <ul class="col-xs-11 col-sm-12 col-md-4">
                                     <li>Its your job</li>
                                     <li> To remember the order of the cakes </li>
                                     <li> After they are lit by there color</li>
                                     <li>You must then click on the cake </li>
 
                                 </ul>
-                                <ul class="col-xs-11 col-sm-12 col-md-4" >
+                                <ul class="col-xs-11 col-sm-12 col-md-4">
                                     <li> Each time you remember correctly </li>
                                     <li>As the level increases </li>
                                     <li>The items to remember will increase by +1 </li>
-
-                                    <li> Good Luck!</li>
                                 </ul>
+                                Good Luck!
                             </div>
                             <div class="row">
-                                 <div class="col-xs-5 col-md-4"></div>
+                                <div class="col-xs-5 col-md-4"></div>
                                 <div class="col-xs-2 col-md-2"><img src="assets/img/bread_boss1.png" alt="boss cartoon"
                                         class="img-fluid"></div>
                                 <div class="col-xs-5 col-md-4"></div>
@@ -105,37 +105,36 @@
 
 
 
-                        </span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Level - counter -->
+                <!-- Level-counter -->
                 <div class="col-md-4 col-sm-12 col-xs-12 ">
                     <h3>Level</h3>
                     <h3 id="level">0</h3>
                 </div>
                 <div class="col-md-4 col-sm-12 col-xs-12">
-                <!----on/off---->
+                    <!-- on/off-button -->
                     <div class="col-12 d-flex justify-content-center">
                         <button type="button" class=" btn hide-button shadow otherbtn" id="onBtn" value="OFF"
                             style="color: #CCC5B9" onclick="onButtonOn();">
                             OFF</button>
-                            
+
                     </div>
                 </div>
             </div>
-            <!----Footer-->
-            <footer>
-                <div class="copyright row">
-            <div class="col-12">
-                <p>_ _ _ _ _</p>
-                <p style="margin-bottom: 10px;">&copy; 2021 BarryBlock88 - Remember the Order</p>
+        </div>
+    </div>
+    <!--footer-->
+    <footer>
+        <div class=" d-flex justify-content-center row">
+            <div class="col-12 d-flex justify-content-center">
+                <br>
+                <p style="margin-top: 14px;">&copy; 2021 BarryBlock88 - Remember the Order</p>
             </div>
         </div>
-            </footer>
+    </footer>
 
-
-
-            <script type="text/javascript" src="assets/js/script.js"></script>
-
+    <script src="assets/js/script.js"></script>
 </body>

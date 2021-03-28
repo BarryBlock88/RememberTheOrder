@@ -11,7 +11,7 @@ let hard = false;
 let win;
 
 $(window).on('load', function(){
-$('#modal-boss').show('modal')        
+$('#modal-boss').show('modal');        
 });
 $('.close').on('click', function(){
   $('#modal-boss').hide('modal'); 
@@ -35,23 +35,23 @@ let hardMode = document.getElementById('difficulty');
 function onButtonOn() {
     if (onButton.value == "OFF") {
         onButton.value = "ON";
-        onButton.style.color = "rgb(17, 212, 226)"
-         $('#onBtn').html("ON")
+        onButton.style.color = "rgb(17, 212, 226)";
+         $('#onBtn').html("ON");
     } else {
         onButton.value = "OFF";
-        onButton.style.color = "#CCC5B9"
-        $('#onBtn').html("OFF")     
+        onButton.style.color = "#CCC5B9";
+        $('#onBtn').html("OFF");    
     }
 }
 function hardModeBtn() {
     if (hardMode.value == "NORMAL") {
         hardMode.value = "BUSY";
-        hardMode.style.color = "rgb(17, 212, 226)"
-          $('#difficulty').html("BUSY")
+        hardMode.style.color = "rgb(17, 212, 226)";
+          $('#difficulty').html("BUSY");
     } else {
         hardMode.value = "NORMAL";
-        hardMode.style.color = "#CCC5B9"
-          $('#difficulty').html("NORMAL")
+        hardMode.style.color = "#CCC5B9";
+          $('#difficulty').html("NORMAL");
     }
 }
 
@@ -63,14 +63,14 @@ function hardModeActive() {
     } else {
         hard = false;
     }
-};
+}
 
 
 onButton.addEventListener('click', gameOn);
 function gameOn() {
     if (onButton.value == 'ON') {
         on = true;
-        console.log('GameOn')
+        console.log('GameOn');
         $('#prompt').html("...Ready..start taking orders!...");
     } else {
         on = false;
@@ -79,7 +79,7 @@ function gameOn() {
         clearInterval(levelInterval);
          levelCounter.innerHTML = 0;
     }
-};
+}
 
 startBtn.addEventListener('click', function() {
     if (on == true) {
@@ -93,7 +93,7 @@ startBtn.addEventListener('click', function() {
 
 function play() {
     
-        console.log('GameStart')
+        console.log('GameStart');
         win = false;
         sequence = [];
         playerSequence = [];
@@ -107,7 +107,7 @@ function play() {
         }
         computerSequence = true;
 
-        levelInterval = setInterval(gameTurn, 800)
+        levelInterval = setInterval(gameTurn, 800);
     }
 
 
@@ -140,14 +140,14 @@ function gameTurn() {
                 four();
             }
             flash++;
-        }, 200)
+        }, 200);
     }
 
-};
+}
 
 function one() {
     cinRoll.style.backgroundColor = "cornflowerblue";
-};
+}
 
 function two() {
     bread.style.backgroundColor = "#ff69b4";
@@ -157,12 +157,12 @@ function two() {
 
 function three() {
     painAu.style.backgroundColor = "rgb(221, 185, 64)";
-};
+}
 
 
 function four() {
     faCake.style.backgroundColor = "rgb(105, 237, 100)";
-};
+}
 
 
 function clearBackground() {
@@ -199,7 +199,7 @@ function clearColor() {
 
 
 cinRoll.addEventListener('click', function () {
-    if (on = true) {
+    if (on == true) {
         playerSequence.push(1);
         checkAnswer();
         one();
@@ -212,7 +212,7 @@ cinRoll.addEventListener('click', function () {
 });
 
 bread.addEventListener('click', function () {
-    if (on = true) {
+  if (on == true) {
         playerSequence.push(2);
         checkAnswer();
         two();
@@ -225,7 +225,7 @@ bread.addEventListener('click', function () {
 });
 
 painAu.addEventListener('click', function () {
-    if (on = true) {
+    if (on == true) {
         playerSequence.push(3);
         checkAnswer();
         three();
@@ -238,7 +238,7 @@ painAu.addEventListener('click', function () {
 });
 
 faCake.addEventListener('click', function () {
-    if (on = true) {
+    if (on == true) {
         playerSequence.push(4);
         checkAnswer();
         four();
