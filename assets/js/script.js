@@ -10,6 +10,7 @@ let on = false;
 let hard = false;
 let win;
 
+// game audio snippets
 let audio1 = document.getElementById('btn-audio1');
 let audio2 = document.getElementById('btn-audio2');
 let audio3 = document.getElementById('btn-audio3');
@@ -18,19 +19,22 @@ let audioError = document.getElementById('error-audio');
 let winGameAudio = document.getElementById('win-game-msg');
 let nextLevelAudio = document.getElementById('next-level-audio');
 
+// game tiles
 let bread = document.getElementById('bread');
 let cinRoll = document.getElementById('cinnimon-roll');
 let painAu = document.getElementById('pain-au-chocolat');
 let faCake = document.getElementById('fairy-cake');
 
-
-let startBtn = document.getElementById('startbtn');
+// level counter
 let levelCounter = document.getElementById('level');
+
+// buttons
+let startBtn = document.getElementById('startbtn');
 let onButton = document.getElementById('onBtn');
 let hardMode = document.getElementById('difficulty');
 
 
-
+// on-off button
 function onButtonOn() {
     if (onButton.value == "OFF") {
         onButton.value = "ON";
@@ -42,6 +46,8 @@ function onButtonOn() {
         $('#onBtn').html("OFF");
     }
 }
+
+// difficulty button
 function hardModeBtn() {
     if (hardMode.value == "NORMAL") {
         hardMode.value = "HARD";
@@ -54,7 +60,7 @@ function hardModeBtn() {
     }
 }
 
-
+// active hard mode
 hardMode.addEventListener('click', hardModeActive);
 function hardModeActive() {
     if (hardMode.value == "HARD") {
@@ -64,7 +70,7 @@ function hardModeActive() {
     }
 }
 
-
+// game on (in ready state)
 onButton.addEventListener('click', gameOn);
 function gameOn() {
     if (onButton.value == 'ON') {
@@ -80,6 +86,7 @@ function gameOn() {
     }
 }
 
+// play game button acticvation
 startBtn.addEventListener('click', function () {
     if (on == true) {
         playGame();
@@ -90,6 +97,8 @@ startBtn.addEventListener('click', function () {
     }
 });
 
+
+// main play game function
 function playGame() {
 
     console.log('GameStart');
@@ -109,7 +118,7 @@ function playGame() {
     levelInterval = setInterval(gameTurn, 800);
 }
 
-
+// computer squence activation
 function gameTurn() {
     $('#prompt').html("...Keep an eye on the buns!...");
     on = false;
@@ -121,7 +130,7 @@ function gameTurn() {
         on = true;
         $('#prompt').html("...Now your turn, do you remember!...");
     }
-    // Asigns the numbers 1-4 
+    // Asigns the numbers 1-4 to on of the 4 game button tiles
     if (computerSequence) {
         clearBackground();
         setTimeout(function () {
@@ -147,6 +156,8 @@ function gameTurn() {
 
 }
 
+
+// changes the game button tiles to show they are highlighted (chosen)
 function one() {
     cinRoll.style.backgroundColor = "cornflowerblue";
 }
@@ -165,7 +176,7 @@ function four() {
     faCake.style.backgroundColor = "rgb(105, 237, 100)";
 }
 
-
+// clears the game button tiles after they are highlighted
 function clearBackground() {
     cinRoll.style.backgroundColor = "transparent";
     bread.style.backgroundColor = "transparent";
@@ -176,7 +187,7 @@ function clearBackground() {
     painAu.style.border = " brown solid 1px";
     faCake.style.border = " brown solid 1px";
 }
-
+// highlights all buttons in the game area
 function flashColor() {
     cinRoll.style.border = "brown solid 1px";
     bread.style.border = "brown solid 1px";
@@ -190,6 +201,7 @@ function flashColor() {
     }
 
 }
+// clears all buttons in the game area after they are flashed
 function clearColor() {
     cinRoll.style.border = "none";
     bread.style.border = "none";
@@ -199,6 +211,7 @@ function clearColor() {
 }
 
 
+// allows player to interact with the game button tiles and thus the game
 cinRoll.addEventListener('click', function () {
     if (on == true) {
         playerSequence.push(1);
@@ -255,6 +268,7 @@ faCake.addEventListener('click', function () {
     }
 });
 
+// allows the player to interact with the cursor to show the active game button tiles
 cinRoll.addEventListener('mouseenter', one);
 cinRoll.addEventListener('mouseleave', clearBackground);
 bread.addEventListener('mouseenter', two);
@@ -264,6 +278,8 @@ painAu.addEventListener('mouseleave', clearBackground);
 faCake.addEventListener('mouseenter', four);
 faCake.addEventListener('mouseleave', clearBackground);
 
+
+// checks the players selection against that of the computer sequence
 function checkAnswer() {
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1])
         good = false;
@@ -275,6 +291,8 @@ function checkAnswer() {
     nextLevel();
 }
 
+
+// when the player enters in the wrong answer to show they've made a mistake
 function playError() {
     if (good == false) {
         flashColor();
@@ -283,7 +301,7 @@ function playError() {
         setTimeout(function () {
             levelCounter.innerHTML = level;
             clearBackground();
-
+            // restarts the level from the beginning (1) if the player has selected hard mode
             if (hard) {
                 playGame();
             } else {
@@ -297,7 +315,7 @@ function playError() {
     }
 }
 
-
+// allows the player to progress to the next level after successfully completeing the present level
 function nextLevel() {
     if (level == playerSequence.length && good && !win) {
         nextLevelAudio.play();
@@ -310,6 +328,7 @@ function nextLevel() {
     }
 }
 
+// tells the player when the have succesfully completed the game
 function winGame() {
     flashColor();
     $('#prompt').html("You WON the Game!");
@@ -319,7 +338,9 @@ function winGame() {
 }
 
 
-// from w3 schools
+// https://www.w3schools.com/howto/howto_js_popup.asp - from w3 schools
+
+// allows the pop up tutorial window to become visible
 function speechBubble() {
     var popup = document.getElementById("gameBubble");
     popup.classList.toggle("show");

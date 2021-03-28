@@ -8,12 +8,14 @@ body, html {
     padding: 0;
     background-color: #EB5E28;
     font-family: 'VT323', monospace;
-     background-image: url(../img/costumer_breadpeach.png);
-    background-size: 60%;
+    background-image: url(../img/costumer_breadpeach.png);
+    background-size: 70%;
     background-repeat: no-repeat;
     position: relative;
-   top: 4%;
+    top: 4%;
     width: 100%;
+    overflow:scroll;
+    overflow-x:hidden;
 }
 /*__________________________________________Main game area_____*/
 
