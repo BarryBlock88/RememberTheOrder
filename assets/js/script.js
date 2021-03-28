@@ -15,6 +15,8 @@ let audio2 = document.getElementById('btn-audio2');
 let audio3 = document.getElementById('btn-audio3');
 let audio4 = document.getElementById('btn-audio4');
 let audioError = document.getElementById('error-audio');
+let winGameAudio = document.getElementById('win-game-msg');
+let nextLevelAudio = document.getElementById('next-level-audio');
 
 let bread = document.getElementById('bread');
 let cinRoll = document.getElementById('cinnimon-roll');
@@ -298,6 +300,7 @@ function playError() {
 
 function nextLevel() {
     if (level == playerSequence.length && good && !win) {
+        nextLevelAudio.play();
         level++;
         levelCounter.innerHTML = level;
         playerSequence = [];
@@ -310,6 +313,7 @@ function nextLevel() {
 function winGame() {
     flashColor();
     $('#prompt').html("You WON the Game!");
+     winGameAudio.play();
     on = false;
     win = true;
 }
