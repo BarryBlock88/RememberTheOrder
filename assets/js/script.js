@@ -14,6 +14,7 @@ let audio1 = document.getElementById('btn-audio1');
 let audio2 = document.getElementById('btn-audio2');
 let audio3 = document.getElementById('btn-audio3');
 let audio4 = document.getElementById('btn-audio4');
+let audioError = document.getElementById('err-audio');
 
 let bread = document.getElementById('bread');
 let cinRoll = document.getElementById('cinnimon-roll');
@@ -275,6 +276,7 @@ function checkAnswer() {
 function playError() {
     if (good == false) {
         flashColor();
+        audioError.play();
         $('#prompt').html("OH NO you made a mistake!");
         setTimeout(function () {
             levelCounter.innerHTML = level;
