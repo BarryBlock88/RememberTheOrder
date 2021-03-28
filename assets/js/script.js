@@ -14,7 +14,7 @@ let audio1 = document.getElementById('btn-audio1');
 let audio2 = document.getElementById('btn-audio2');
 let audio3 = document.getElementById('btn-audio3');
 let audio4 = document.getElementById('btn-audio4');
-let allAudio = audio1, audio2, audio3, audio4;
+let allAudio = {audio1, audio2, audio3, audio4};
 
 let bread = document.getElementById('bread');
 let cinRoll = document.getElementById('cinnimon-roll');
