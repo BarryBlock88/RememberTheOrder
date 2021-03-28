@@ -145,7 +145,7 @@ function gameTurn() {
 }
 
 function one() {
-    cinRoll.style.backgroundColor = "cornflowerblue";       
+    cinRoll.style.backgroundColor = "cornflowerblue";
 }
 
 function two() {
