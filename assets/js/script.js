@@ -42,9 +42,9 @@ function onButtonOn() {
 }
 function hardModeBtn() {
     if (hardMode.value == "NORMAL") {
-        hardMode.value = "BUSY";
+        hardMode.value = "HARD";
         hardMode.style.color = "rgb(17, 212, 226)";
-        $('#difficulty').html("BUSY");
+        $('#difficulty').html("HARD");
     } else {
         hardMode.value = "NORMAL";
         hardMode.style.color = "#CCC5B9";
@@ -55,7 +55,7 @@ function hardModeBtn() {
 
 hardMode.addEventListener('click', hardModeActive);
 function hardModeActive() {
-    if (hardMode.value == "BUSY") {
+    if (hardMode.value == "HARD") {
         hard = true;
     } else {
         hard = false;
@@ -80,7 +80,7 @@ function gameOn() {
 
 startBtn.addEventListener('click', function () {
     if (on == true) {
-        play();
+        playGame();
         console.log('GameReady');
     } else {
         console.log('GameNotOn');
@@ -88,7 +88,7 @@ startBtn.addEventListener('click', function () {
     }
 });
 
-function play() {
+function playGame() {
 
     console.log('GameStart');
     win = false;
@@ -119,7 +119,7 @@ function gameTurn() {
         on = true;
         $('#prompt').html("...Now your turn, do you remember!...");
     }
-    // Asigns the numbers 1-4 ,calls the function to flash the correct sequence of colours for the computer
+    // Asigns the numbers 1-4 
     if (computerSequence) {
         clearBackground();
         setTimeout(function () {
@@ -283,7 +283,7 @@ function playError() {
             clearBackground();
 
             if (hard) {
-                play();
+                playGame();
             } else {
                 computerSequence = true;
                 flash = 0;
