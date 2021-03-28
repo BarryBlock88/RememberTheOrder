@@ -10,14 +10,11 @@ let on = false;
 let hard = false;
 let win;
 
-$(window).on('load', function(){
-$('#modal-boss').show('modal');        
-});
-$('.close').on('click', function(){
-  $('#modal-boss').hide('modal'); 
-});
-
-
+let audio1 = document.getElementById('btn-audio1');
+let audio2 = document.getElementById('btn-audio2');
+let audio3 = document.getElementById('btn-audio3');
+let audio4 = document.getElementById('btn-audio4');
+let allAudio = audio1, audio2, audio3, audio4;
 
 let bread = document.getElementById('bread');
 let cinRoll = document.getElementById('cinnimon-roll');
@@ -36,22 +33,22 @@ function onButtonOn() {
     if (onButton.value == "OFF") {
         onButton.value = "ON";
         onButton.style.color = "rgb(17, 212, 226)";
-         $('#onBtn').html("ON");
+        $('#onBtn').html("ON");
     } else {
         onButton.value = "OFF";
         onButton.style.color = "#CCC5B9";
-        $('#onBtn').html("OFF");    
+        $('#onBtn').html("OFF");
     }
 }
 function hardModeBtn() {
     if (hardMode.value == "NORMAL") {
         hardMode.value = "BUSY";
         hardMode.style.color = "rgb(17, 212, 226)";
-          $('#difficulty').html("BUSY");
+        $('#difficulty').html("BUSY");
     } else {
         hardMode.value = "NORMAL";
         hardMode.style.color = "#CCC5B9";
-          $('#difficulty').html("NORMAL");
+        $('#difficulty').html("NORMAL");
     }
 }
 
@@ -74,45 +71,45 @@ function gameOn() {
         $('#prompt').html("...Ready..start taking orders!...");
     } else {
         on = false;
-         $('#prompt').html("...Game is off..."); 
+        $('#prompt').html("...Game is off...");
         clearBackground();
         clearInterval(levelInterval);
-         levelCounter.innerHTML = 0;
+        levelCounter.innerHTML = 0;
     }
 }
 
-startBtn.addEventListener('click', function() {
+startBtn.addEventListener('click', function () {
     if (on == true) {
         play();
-         console.log('GameReady');
+        console.log('GameReady');
     } else {
         console.log('GameNotOn');
-       $('#prompt').html("turn ON to continue!");
+        $('#prompt').html("turn ON to continue!");
     }
 });
 
 function play() {
-    
-        console.log('GameStart');
-        win = false;
-        sequence = [];
-        playerSequence = [];
-        flash = 0;
-        levelInterval = 0;
-        level = 1;
-        levelCounter.innerHTML = 1;
-        good = true;
-        for (let i = 0; i < 20; i++) {
-            sequence.push(Math.floor(Math.random() * 4) + 1);
-        }
-        computerSequence = true;
 
-        levelInterval = setInterval(gameTurn, 800);
+    console.log('GameStart');
+    win = false;
+    sequence = [];
+    playerSequence = [];
+    flash = 0;
+    levelInterval = 0;
+    level = 1;
+    levelCounter.innerHTML = 1;
+    good = true;
+    for (let i = 0; i < 20; i++) {
+        sequence.push(Math.floor(Math.random() * 4) + 1);
     }
+    computerSequence = true;
+
+    levelInterval = setInterval(gameTurn, 800);
+}
 
 
 function gameTurn() {
-     $('#prompt').html("...Keep an eye on the buns!...");
+    $('#prompt').html("...Keep an eye on the buns!...");
     on = false;
 
     if (flash == level) {
@@ -120,7 +117,7 @@ function gameTurn() {
         computerSequence = false;
         clearBackground();
         on = true;
-         $('#prompt').html("...Now your turn, do you remember!...");
+        $('#prompt').html("...Now your turn, do you remember!...");
     }
     // Asigns the numbers 1-4 ,calls the function to flash the correct sequence of colours for the computer
     if (computerSequence) {
@@ -128,16 +125,19 @@ function gameTurn() {
         setTimeout(function () {
             if (sequence[flash] == 1) {
                 one();
+                audio1.play();
             }
             if (sequence[flash] == 2) {
                 two();
-   
+                audio2.play();
             }
             if (sequence[flash] == 3) {
                 three();
+                audio3.play();
             }
             if (sequence[flash] == 4) {
                 four();
+                audio4.play();
             }
             flash++;
         }, 200);
@@ -146,15 +146,11 @@ function gameTurn() {
 }
 
 function one() {
-    cinRoll.style.backgroundColor = "cornflowerblue";
-    let audio1 = document.getElementById('btn-audio1');
-    audio1.play();
+    cinRoll.style.backgroundColor = "cornflowerblue";       
 }
 
 function two() {
     bread.style.backgroundColor = "#ff69b4";
-    let audio2 = document.getElementById('btn-audio2');
-    audio2.play();  
 }
 
 
@@ -184,11 +180,11 @@ function flashColor() {
     bread.style.border = "brown solid 1px";
     painAu.style.border = "brown solid 1px";
     faCake.style.border = "brown solid 1px";
-     $('.game-tile-area').addClass('animateBun',500);
+    $('.game-tile-area').addClass('animateBun', 500);
     if (on == true) {
         setTimeout(function () {
             clearColor();
-        }, 300);
+        }, 400);
     }
 
 }
@@ -197,7 +193,7 @@ function clearColor() {
     bread.style.border = "none";
     painAu.style.border = "none";
     faCake.style.border = "none";
-     $('.game-tile-area').removeClass('animateBun',500);
+    $('.game-tile-area').removeClass('animateBun', 500);
 }
 
 
@@ -206,6 +202,7 @@ cinRoll.addEventListener('click', function () {
         playerSequence.push(1);
         checkAnswer();
         one();
+        audio1.play();
         if (!win) {
             setTimeout(function () {
                 clearBackground();
@@ -215,10 +212,11 @@ cinRoll.addEventListener('click', function () {
 });
 
 bread.addEventListener('click', function () {
-  if (on == true) {
+    if (on == true) {
         playerSequence.push(2);
         checkAnswer();
         two();
+        audio2.play();
         if (!win) {
             setTimeout(function () {
                 clearBackground();
@@ -232,6 +230,7 @@ painAu.addEventListener('click', function () {
         playerSequence.push(3);
         checkAnswer();
         three();
+        audio3.play();
         if (!win) {
             setTimeout(function () {
                 clearBackground();
@@ -245,6 +244,7 @@ faCake.addEventListener('click', function () {
         playerSequence.push(4);
         checkAnswer();
         four();
+        audio4.play();
         if (!win) {
             setTimeout(function () {
                 clearBackground();
@@ -276,7 +276,8 @@ function checkAnswer() {
 function playError() {
     if (good == false) {
         flashColor();
-       $('#prompt').html("OH NO you made a mistake!");
+        allAudio.play();
+        $('#prompt').html("OH NO you made a mistake!");
         setTimeout(function () {
             levelCounter.innerHTML = level;
             clearBackground();
@@ -308,7 +309,7 @@ function nextLevel() {
 
 function winGame() {
     flashColor();
-     $('#prompt').html("You WON the Game!"); 
+    $('#prompt').html("You WON the Game!");
     on = false;
     win = true;
 }
@@ -316,6 +317,6 @@ function winGame() {
 
 // from w3 schools
 function speechBubble() {
-  var popup = document.getElementById("gameBubble");
-  popup.classList.toggle("show");
+    var popup = document.getElementById("gameBubble");
+    popup.classList.toggle("show");
 }
