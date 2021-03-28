@@ -148,13 +148,13 @@ function gameTurn() {
 function one() {
     cinRoll.style.backgroundColor = "cornflowerblue";
     let audio1 = document.getElementById('btn-audio1');
-    audio.play();
+    audio1.play();
 }
 
 function two() {
     bread.style.backgroundColor = "#ff69b4";
     let audio2 = document.getElementById('btn-audio2');
-    audio.play();  
+    audio2.play();  
 }
 
 
