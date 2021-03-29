@@ -86,7 +86,7 @@ function gameOn() {
     }
 }
 
-// play game button acticvation
+// play game button activation
 startBtn.addEventListener('click', function () {
     if (on == true) {
         playGame();
@@ -151,7 +151,7 @@ function gameTurn() {
                 audio4.play();
             }
             flash++;
-        }, 400);
+        }, 500);
     }
 
 }
@@ -309,9 +309,9 @@ function playError() {
                 flash = 0;
                 playerSequence = [];
                 good = true;
-                levelInterval = setInterval(gameTurn, 800);
+                levelInterval = setInterval(gameTurn, 1000);
             }
-        }, 200);
+        }, 800);
     }
 }
 
@@ -324,7 +324,7 @@ function nextLevel() {
         playerSequence = [];
         computerSequence = true;
         flash = 0;
-        levelInterval = setInterval(gameTurn, 800);
+        levelInterval = setInterval(gameTurn, 1000);
     }
 }
 
