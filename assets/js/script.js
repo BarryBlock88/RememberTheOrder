@@ -115,7 +115,7 @@ function playGame() {
     }
     computerSequence = true;
 
-    levelInterval = setInterval(gameTurn, 800);
+    levelInterval = setInterval(gameTurn, 900);
 }
 
 // computer squence activation
@@ -151,7 +151,7 @@ function gameTurn() {
                 audio4.play();
             }
             flash++;
-        }, 500);
+        }, 800);
     }
 
 }
@@ -197,7 +197,7 @@ function flashColor() {
     if (on == true) {
         setTimeout(function () {
             clearColor();
-        }, 400);
+        }, 200);
     }
 
 }
@@ -309,9 +309,9 @@ function playError() {
                 flash = 0;
                 playerSequence = [];
                 good = true;
-                levelInterval = setInterval(gameTurn, 1000);
+                levelInterval = setInterval(gameTurn, 900);
             }
-        }, 800);
+        }, 1000);
     }
 }
 
@@ -324,7 +324,7 @@ function nextLevel() {
         playerSequence = [];
         computerSequence = true;
         flash = 0;
-        levelInterval = setInterval(gameTurn, 1000);
+        levelInterval = setInterval(gameTurn, 900);
     }
 }
 
