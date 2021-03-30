@@ -154,7 +154,7 @@ function gameTurn() {
                 audio4.play();
             }
             flash++;
-        }, 800);
+        }, 1000);
     }
 
 }
@@ -212,7 +212,7 @@ function flashColor() {
     if (on == true) {
         setTimeout(function () {
             clearColor();
-        }, 200);
+        }, 300);
     }
 
 }
@@ -236,7 +236,7 @@ cinRoll.addEventListener('click', function () {
         if (!win) {
             setTimeout(function () {
                 clearBackground();
-            }, 200);
+            }, 300);
         }
     }
 });
@@ -250,7 +250,7 @@ bread.addEventListener('click', function () {
         if (!win) {
             setTimeout(function () {
                 clearBackground();
-            }, 200);
+            }, 300);
         }
     }
 });
@@ -264,7 +264,7 @@ painAu.addEventListener('click', function () {
         if (!win) {
             setTimeout(function () {
                 clearBackground();
-            }, 200);
+            }, 300);
         }
     }
 });
@@ -278,7 +278,7 @@ faCake.addEventListener('click', function () {
         if (!win) {
             setTimeout(function () {
                 clearBackground();
-            }, 200);
+            }, 300);
         }
     }
 });
@@ -316,7 +316,7 @@ function playError() {
                 good = true;
                 levelInterval = setInterval(gameTurn, 900);
             }
-        }, 1000);
+        }, 900);
     }
 }
 
