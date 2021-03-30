@@ -5,7 +5,6 @@ let level;
 let good;
 let computerSequence;
 let levelInterval;
-let sound = true;
 let on = false;
 let hard = false;
 let win;
@@ -182,17 +181,29 @@ function clearBackground() {
     bread.style.backgroundColor = "transparent";
     painAu.style.backgroundColor = "transparent";
     faCake.style.backgroundColor = "transparent";
-    cinRoll.style.border = " brown solid 1px";
-    bread.style.border = " brown solid 1px";
-    painAu.style.border = " brown solid 1px";
-    faCake.style.border = " brown solid 1px";
+    cinRoll.style.border = " #CCC5B9 solid 1px";
+    bread.style.border = " #CCC5B9 solid 1px";
+    painAu.style.border = " #CCC5B9 solid 1px";
+    faCake.style.border = " #CCC5B9 solid 1px";
 }
+
+// allows the player to interact with the cursor to show the active game button tiles
+cinRoll.addEventListener('mouseenter', one);
+cinRoll.addEventListener('mouseleave', clearBackground);
+bread.addEventListener('mouseenter', two);
+bread.addEventListener('mouseleave', clearBackground);
+painAu.addEventListener('mouseenter', three);
+painAu.addEventListener('mouseleave', clearBackground);
+faCake.addEventListener('mouseenter', four);
+faCake.addEventListener('mouseleave', clearBackground);
+
+
 // highlights all buttons in the game area
 function flashColor() {
-    cinRoll.style.border = "brown solid 1px";
-    bread.style.border = "brown solid 1px";
-    painAu.style.border = "brown solid 1px";
-    faCake.style.border = "brown solid 1px";
+    cinRoll.style.border = "#CCC5B9 solid 1px";
+    bread.style.border = "#CCC5B9 solid 1px";
+    painAu.style.border = "#CCC5B9 solid 1px";
+    faCake.style.border = "#CCC5B9 solid 1px";
     $('.game-tile-area').addClass('animateBun', 500);
     if (on == true) {
         setTimeout(function () {
@@ -267,16 +278,6 @@ faCake.addEventListener('click', function () {
         }
     }
 });
-
-// allows the player to interact with the cursor to show the active game button tiles
-cinRoll.addEventListener('mouseenter', one);
-cinRoll.addEventListener('mouseleave', clearBackground);
-bread.addEventListener('mouseenter', two);
-bread.addEventListener('mouseleave', clearBackground);
-painAu.addEventListener('mouseenter', three);
-painAu.addEventListener('mouseleave', clearBackground);
-faCake.addEventListener('mouseenter', four);
-faCake.addEventListener('mouseleave', clearBackground);
 
 
 // checks the players selection against that of the computer sequence
