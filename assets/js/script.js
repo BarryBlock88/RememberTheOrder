@@ -109,14 +109,18 @@ function playGame() {
     level = 1;
     levelCounter.innerHTML = 1;
     good = true;
-    for (let i = 0; i < 20; i++) {
-        sequence.push(Math.floor(Math.random() * 4) + 1);
+    for (let i = 0; i < 10; i++) {
+        sequence.push((getRndInteger(1, 4)));
     }
     computerSequence = true;
 
     levelInterval = setInterval(gameTurn, 900);
 }
 
+//random function--- https://www.w3schools.com/js/js_random.asp ---from w3 schools
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 // computer squence activation
 function gameTurn() {
     $('#prompt').html("...Keep an eye on the buns!...");
@@ -285,14 +289,14 @@ function checkAnswer() {
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1])
         good = false;
 
-    else if (playerSequence.length == 20 && good) {
+    else if (playerSequence.length == 10 && good) {
         winGame();
     }
     playError();
     nextLevel();
 }
-
-
+  
+  
 // when the player enters in the wrong answer to show they've made a mistake
 function playError() {
     if (good == false) {
