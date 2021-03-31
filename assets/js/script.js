@@ -2,7 +2,7 @@ let sequence = [];
 let playerSequence = [];
 let flash;
 let level;
-let good;
+let success;
 let computerSequence;
 let levelInterval;
 let on = false;
@@ -108,18 +108,18 @@ function playGame() {
     levelInterval = 0;
     level = 1;
     levelCounter.innerHTML = 1;
-    good = true;
+    success = true;
     for (let i = 0; i < 10; i++) {
         sequence.push((getRndInteger(1, 4)));
     }
     computerSequence = true;
 
-    levelInterval = setInterval(gameTurn, 900);
+    levelInterval = setInterval(gameTurn, 800);
 }
 
 //random function--- https://www.w3schools.com/js/js_random.asp ---from w3 schools
 function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)+ min);
 }
 // computer squence activation
 function gameTurn() {
@@ -134,7 +134,7 @@ function gameTurn() {
         $('#prompt').html("...Now your turn, do you remember!...");
     }
     // Asigns the numbers 1-4 to on of the 4 game button tiles
-    if (computerSequence) {
+    if (computerSequence == true) {
         clearBackground();
         setTimeout(function () {
             if (sequence[flash] == 1) {
@@ -154,7 +154,7 @@ function gameTurn() {
                 audio4.play();
             }
             flash++;
-        }, 1000);
+        }, 700);
     }
 
 }
@@ -162,11 +162,11 @@ function gameTurn() {
 
 // changes the game button tiles to show they are highlighted (chosen)
 function one() {
-    cinRoll.style.backgroundColor = "cornflowerblue";
+    cinRoll.style.backgroundColor = "rgb(100,149,237)";
 }
 
 function two() {
-    bread.style.backgroundColor = "#ff69b4";
+    bread.style.backgroundColor = "rgb(255, 105, 180)";
 }
 
 
@@ -190,15 +190,27 @@ function clearBackground() {
     painAu.style.border = " #CCC5B9 solid 1px";
     faCake.style.border = " #CCC5B9 solid 1px";
 }
-
+// shows active game button tiles with opacity as to differentiate between active and clicked
+function hoverOne() {
+    cinRoll.style.backgroundColor = "rgb(100,149,237, 0.5)";
+}
+function hoverTwo() {
+    bread.style.backgroundColor = "rgb(255, 105, 180, 0.5)";}
+function hoverThree() {
+    painAu.style.backgroundColor = "rgb(221, 185, 64, 0.5)";
+}
+function hoverFour() {
+    faCake.style.backgroundColor = "rgb(105, 237, 100, 0.5)";
+}
 // allows the player to interact with the cursor to show the active game button tiles
-cinRoll.addEventListener('mouseenter', one);
+
+cinRoll.addEventListener('mouseenter', hoverOne);
 cinRoll.addEventListener('mouseleave', clearBackground);
-bread.addEventListener('mouseenter', two);
+bread.addEventListener('mouseenter', hoverTwo);
 bread.addEventListener('mouseleave', clearBackground);
-painAu.addEventListener('mouseenter', three);
+painAu.addEventListener('mouseenter', hoverThree);
 painAu.addEventListener('mouseleave', clearBackground);
-faCake.addEventListener('mouseenter', four);
+faCake.addEventListener('mouseenter', hoverFour);
 faCake.addEventListener('mouseleave', clearBackground);
 
 
@@ -212,7 +224,7 @@ function flashColor() {
     if (on == true) {
         setTimeout(function () {
             clearColor();
-        }, 300);
+        }, 200);
     }
 
 }
@@ -236,7 +248,7 @@ cinRoll.addEventListener('click', function () {
         if (!win) {
             setTimeout(function () {
                 clearBackground();
-            }, 300);
+            }, 200);
         }
     }
 });
@@ -250,7 +262,7 @@ bread.addEventListener('click', function () {
         if (!win) {
             setTimeout(function () {
                 clearBackground();
-            }, 300);
+            }, 200);
         }
     }
 });
@@ -264,7 +276,7 @@ painAu.addEventListener('click', function () {
         if (!win) {
             setTimeout(function () {
                 clearBackground();
-            }, 300);
+            }, 200);
         }
     }
 });
@@ -278,7 +290,7 @@ faCake.addEventListener('click', function () {
         if (!win) {
             setTimeout(function () {
                 clearBackground();
-            }, 300);
+            }, 200);
         }
     }
 });
@@ -287,9 +299,9 @@ faCake.addEventListener('click', function () {
 // checks the players selection against that of the computer sequence
 function checkAnswer() {
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1])
-        good = false;
+        success = false;
 
-    else if (playerSequence.length == 10 && good) {
+    else if (playerSequence.length == 10 && success) {
         winGame();
     }
     playError();
@@ -299,7 +311,7 @@ function checkAnswer() {
   
 // when the player enters in the wrong answer to show they've made a mistake
 function playError() {
-    if (good == false) {
+    if (success == false) {
         flashColor();
         audioError.play();
         $('#prompt').html("OH NO you made a mistake!");
@@ -313,23 +325,23 @@ function playError() {
                 computerSequence = true;
                 flash = 0;
                 playerSequence = [];
-                good = true;
-                levelInterval = setInterval(gameTurn, 900);
+                success = true;
+                levelInterval = setInterval(gameTurn, 800);
             }
-        }, 900);
+        }, 700);
     }
 }
 
 // allows the player to progress to the next level after successfully completeing the present level
 function nextLevel() {
-    if (level == playerSequence.length && good && !win) {
+    if (level == playerSequence.length && success && !win) {
         nextLevelAudio.play();
         level++;
         levelCounter.innerHTML = level;
         playerSequence = [];
         computerSequence = true;
         flash = 0;
-        levelInterval = setInterval(gameTurn, 900);
+        levelInterval = setInterval(gameTurn, 800);
     }
 }
 
