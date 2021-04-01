@@ -3,10 +3,14 @@
 
 /*______________________________________General styling____*/
 
+#bg{
+background-color:#EB5E28;
+}
+
+
 body, html {
     margin: 0;
     padding: 0;
-    background-color: #EB5E28;
     font-family: 'VT323', monospace;
     background-image: url(../img/costumer_breadpeach.png);
     background-size: 70%;

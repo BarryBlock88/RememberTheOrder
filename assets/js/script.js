@@ -24,6 +24,9 @@ let cinRoll = document.getElementById('cinnimon-roll');
 let painAu = document.getElementById('pain-au-chocolat');
 let faCake = document.getElementById('fairy-cake');
 
+//Background body
+let backG = document.getElementById('bg');
+
 // level counter
 let levelCounter = document.getElementById('level');
 
@@ -117,6 +120,7 @@ function playGame() {
     levelInterval = setInterval(gameTurn, 800);
 }
 
+
 //random function--- https://www.w3schools.com/js/js_random.asp ---from w3 schools
 function randomSequence(min, max) {
     return Math.floor(Math.random() * (max - min + 1)+ min);
@@ -125,6 +129,8 @@ function randomSequence(min, max) {
 function gameTurn() {
     $('#prompt').html("...Keep an eye on the buns!...");
     on = false;
+    $("#bg").css("background-color", "#EB5E28");
+    $('#prompt').css("color", "#252422")
 
     if (flash == level) {
         clearInterval(levelInterval);
@@ -155,6 +161,8 @@ function gameTurn() {
             }
             flash++;
         }, 500);
+         $("#bg").css("background-color", "#403D39");
+        $('#prompt').css("color", "#FFFCF2")
     }
 
 }
