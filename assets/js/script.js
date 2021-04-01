@@ -110,7 +110,7 @@ function playGame() {
     levelCounter.innerHTML = 1;
     success = true;
     for (let i = 0; i < 10; i++) {
-        sequence.push((getRndInteger(1, 4)));
+        sequence.push((randomSequence(1, 4)));
     }
     computerSequence = true;
 
@@ -118,7 +118,7 @@ function playGame() {
 }
 
 //random function--- https://www.w3schools.com/js/js_random.asp ---from w3 schools
-function getRndInteger(min, max) {
+function randomSequence(min, max) {
     return Math.floor(Math.random() * (max - min + 1)+ min);
 }
 // computer squence activation
@@ -154,7 +154,7 @@ function gameTurn() {
                 audio4.play();
             }
             flash++;
-        }, 700);
+        }, 500);
     }
 
 }
