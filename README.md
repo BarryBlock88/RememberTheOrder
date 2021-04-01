@@ -130,12 +130,11 @@ The background image design, button image design, tutorial image and tab icon we
 ### ***Code validation***
 In the project, no syntax errors were detected, as validated by -
 #### W3C Markup Validator - 
-[Image-html-](assets/testing/)
-
+![Image-html](assets/testing/Screenshot_2021-04-01HtmlValidationChecker.png)
 #### W3C CSS Validator -
-- [Image-css](assets/testing/)
+![Image-css](assets/testing/Screenshot_2021-04-01W3CCSSValidatorResult.png)
 #### Lighthouse report -
-- [Image-lighthouse-report-screenshot](assets/testing/)
+![Image-lighthouse-report-screenshot](assets/testing/Screenshot_2021-04-01LighthouseReportViewer.png) 
 
 ### User Story testing
 
@@ -151,7 +150,7 @@ In the project, no syntax errors were detected, as validated by -
 
 
 
-###Manual Testing
+### Manual Testing
 
 |  				 Test Case 			 |                                                                    				 Description of feature 			                                                                  |  				 Result 			 |
 |:------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------:|
@@ -173,7 +172,7 @@ In the project, no syntax errors were detected, as validated by -
 |  				 16 			        |  				 When the site loads on a mobile the user should see 				a title, 4 image tiles and 4 buttons 			                                                                  |  				 Pass 			   |
 |  				 17 			        |  				 When the site loads on a tablet the user should see 				a title, 4 image tiles and 4 buttons 			                                                                  |  				 Pass 			   |
 
-##Responsiveness Testing
+## Responsiveness Testing
 #### Responsiveness
 The Website was viewed on devices such as Desktop, Laptop, Huawei Y6, iPhone 5/6, iPhone 7/8, Samsung A1. 
 
