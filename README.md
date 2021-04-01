@@ -95,11 +95,26 @@ As a  player/user of this app, I want to know when I've clicked on a button by h
 As a player/user of this app, I want to be able to play this on my phone or laptop.
 ##Design process
 
-#### Links to wireframes
-#### Mobile
-
+### Links to wireframes
 
 #### Desktop 
+
+![Desktop1](assets/wireframes/DesktopWireframe1.png)
+- [Desktop2](assets/wireframes/DesktopWireframe2.png)
+- [Desktop3](assets/wireframes/DesktopWireframe3.png)
+- [Tutorial](assets/wireframes/TutorialPopupWireframe.png)
+
+#### Tablet
+
+![Tablet1](assets/wireframes/TabletWireframe1.png)
+- [Tablet2](assets/wireframes/TabletWireframe2.png)
+- [Tablet3](assets/wireframes/TabletWireframe3.png)
+
+#### Mobile
+
+![Mobile1](assets/wireframes/MobileWireframe1.png)
+- [Mobile2](assets/wireframes/MobileWireframe2.png)
+- [Mobile3](assets/wireframes/MobileWireframe3.png)
 
 
 ### Colour design
@@ -309,9 +324,9 @@ I want to give credit and thanks to
 the following projects, websites and tutorials that I learned from to complete my project.
 #### Past Code Institue MS2 projects for inspiration, such as -
 
--https://github.com/shaamuus/milestone-project-2
--https://github.com/alimgee/milestone-project2-simon-game
--https://github.com/zoet24/presidential-debate
+- https://github.com/shaamuus/milestone-project-2
+- https://github.com/alimgee/milestone-project2-simon-game
+- https://github.com/zoet24/presidential-debate
 
 #### Websites, such as  -
 - https://www.danpurdy.co.uk/tutorial/simon-says-game-in-jquery-tutorial/

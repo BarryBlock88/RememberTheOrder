@@ -62,7 +62,7 @@ function hardModeBtn() {
     }
 }
 
-// active hard mode
+// activate hard mode
 hardMode.addEventListener('click', hardModeActive);
 function hardModeActive() {
     if (hardMode.value == "HARD") {
@@ -125,7 +125,7 @@ function playGame() {
 function randomSequence(min, max) {
     return Math.floor(Math.random() * (max - min + 1)+ min);
 }
-// computer squence activation
+// computer sequence activation
 function gameTurn() {
     $('#prompt').html("...Keep an eye on the buns!...");
     on = false;
@@ -168,7 +168,7 @@ function gameTurn() {
 }
 
 
-// changes the game button tiles to show they are highlighted (chosen)
+// changes the game button tiles background color to show they are highlighted (chosen)
 function one() {
     cinRoll.style.backgroundColor = "rgb(100,149,237)";
 }
@@ -187,7 +187,7 @@ function four() {
     faCake.style.backgroundColor = "rgb(105, 237, 100)";
 }
 
-// clears the game button tiles after they are highlighted
+// returns the game button tiles to there original background after they are highlighted
 function clearBackground() {
     cinRoll.style.backgroundColor = "transparent";
     bread.style.backgroundColor = "transparent";
@@ -210,8 +210,8 @@ function hoverThree() {
 function hoverFour() {
     faCake.style.backgroundColor = "rgb(105, 237, 100, 0.5)";
 }
-// allows the player to interact with the cursor to show the active game button tiles
 
+// allows the player to interact with the cursor to show the active game button tiles
 cinRoll.addEventListener('mouseenter', hoverOne);
 cinRoll.addEventListener('mouseleave', clearBackground);
 bread.addEventListener('mouseenter', hoverTwo);
@@ -222,7 +222,7 @@ faCake.addEventListener('mouseenter', hoverFour);
 faCake.addEventListener('mouseleave', clearBackground);
 
 
-// highlights all buttons in the game area
+// highlights and animates all game button tiles at once in the game area
 function flashColor() {
     cinRoll.style.border = "#CCC5B9 solid 1px";
     bread.style.border = "#CCC5B9 solid 1px";
@@ -252,7 +252,7 @@ cinRoll.addEventListener('click', function () {
         playerSequence.push(1);
         checkAnswer();
         one();
-        //audio1.play();
+        
         if (!win) {
             setTimeout(function () {
                 clearBackground();
@@ -266,7 +266,7 @@ bread.addEventListener('click', function () {
         playerSequence.push(2);
         checkAnswer();
         two();
-       // audio2.play();
+       
         if (!win) {
             setTimeout(function () {
                 clearBackground();
@@ -280,7 +280,7 @@ painAu.addEventListener('click', function () {
         playerSequence.push(3);
         checkAnswer();
         three();
-        //audio3.play();
+        
         if (!win) {
             setTimeout(function () {
                 clearBackground();
@@ -294,7 +294,7 @@ faCake.addEventListener('click', function () {
         playerSequence.push(4);
         checkAnswer();
         four();
-        //audio4.play();
+       
         if (!win) {
             setTimeout(function () {
                 clearBackground();
@@ -317,7 +317,7 @@ function checkAnswer() {
 }
   
   
-// when the player enters in the wrong answer to show they've made a mistake
+// Function for when the player enters in the wrong answer to show they've made a mistake
 function playError() {
     if (success == false) {
         flashColor();
