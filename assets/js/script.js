@@ -130,7 +130,7 @@ function gameTurn() {
     $('#prompt').html("...Keep an eye on the buns!...");
     on = false;
     $("#bg").css("background-color", "#EB5E28");
-    $('#prompt').css("color", "#252422")
+    $('#prompt').css("color", "#252422");
 
     if (flash == level) {
         clearInterval(levelInterval);
@@ -162,7 +162,7 @@ function gameTurn() {
             flash++;
         }, 500);
          $("#bg").css("background-color", "#403D39");
-        $('#prompt').css("color", "#FFFCF2")
+        $('#prompt').css("color", "#FFFCF2");
     }
 
 }
