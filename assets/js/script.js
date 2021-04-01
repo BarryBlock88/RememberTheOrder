@@ -252,7 +252,7 @@ cinRoll.addEventListener('click', function () {
         playerSequence.push(1);
         checkAnswer();
         one();
-        audio1.play();
+        //audio1.play();
         if (!win) {
             setTimeout(function () {
                 clearBackground();
@@ -266,7 +266,7 @@ bread.addEventListener('click', function () {
         playerSequence.push(2);
         checkAnswer();
         two();
-        audio2.play();
+       // audio2.play();
         if (!win) {
             setTimeout(function () {
                 clearBackground();
@@ -280,7 +280,7 @@ painAu.addEventListener('click', function () {
         playerSequence.push(3);
         checkAnswer();
         three();
-        audio3.play();
+        //audio3.play();
         if (!win) {
             setTimeout(function () {
                 clearBackground();
@@ -294,7 +294,7 @@ faCake.addEventListener('click', function () {
         playerSequence.push(4);
         checkAnswer();
         four();
-        audio4.play();
+        //audio4.play();
         if (!win) {
             setTimeout(function () {
                 clearBackground();
@@ -356,6 +356,7 @@ function nextLevel() {
 // tells the player when the have succesfully completed the game
 function winGame() {
     flashColor();
+    $('#winGameModal').modal('show');
     $('#prompt').html("You WON the Game!");
      winGameAudio.play();
     on = false;
