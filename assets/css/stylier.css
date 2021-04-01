@@ -37,7 +37,7 @@ body, html {
 
 /*____________________________________________________Main heading___*/
 .main-heading{
-    color: #252422;
+    color: #CCC5B9;
     
   
 }
@@ -57,6 +57,8 @@ body, html {
 /*____________________________________________________Message prompter (User instruction)___*/
 #prompt{
     color: #252422;
+    font-size: 35px;
+    padding: 10px;
 }
 
 /*______________________________________________________________Non-main buttons____*/
@@ -144,7 +146,7 @@ position: relative;
 
 /* _______________Tutorial popup */
 .popup .popuptext {
-    font-size: 11px;
+    font-size: 12px;
      visibility: hidden;
   width: 70vw;
     height: 70vh;
@@ -155,11 +157,13 @@ position: relative;
   padding: 8px 0;
   position: absolute;
   z-index: 2;
-  bottom: 155%;
-  left: 20%;
+  bottom: 70%;
+  right: none;
   margin-left: -80px;
 }
-
+.popuptext ul{
+    list-style-type: none;
+}
 /* _____________________Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
   visibility: visible;
@@ -195,11 +199,11 @@ animation: bun 0.5s forwards ease-in-out;
 /*_____________________________________________________________________________RESPONISIVENESS____________________*/
 
 
-  @media(max-width: 801px), (min-width: 1281px)  {/*_______________________for laptops and desktops___*/
+  @media(max-width: 801px), (min-width: 1281px)  {/*_______________________for desktops___*/
 
 /*________Main heading___*/
 .main-heading{
-    font-size: 48px;
+    font-size: 45px;
 }
 
 /*_________________________Start game Button___*/
@@ -216,8 +220,8 @@ animation: bun 0.5s forwards ease-in-out;
 }
 /*__________________Message prompter___*/
 #prompt{
-   
-    font-size: 30px;
+    padding: 5px;
+    font-size: 45px;
 }
 /* _______________Tutorial popup font size */
 .popup .popuptext {
@@ -229,7 +233,7 @@ animation: bun 0.5s forwards ease-in-out;
   @media(min-width: 800px),(min-width: 768px){
 /* _______________Tutorial popup font size */
 .popup .popuptext {
-        font-size: 12px;
+        font-size: 16px;
           height: unset;
     }
   }
@@ -241,6 +245,7 @@ animation: bun 0.5s forwards ease-in-out;
      /*______________Main heading___*/
 .main-heading{
     font-size: 40px;
+    margin-bottom: 5px;
 }
 
 /*________________________Start game Button___*/
@@ -258,11 +263,12 @@ animation: bun 0.5s forwards ease-in-out;
 /*_____________Message prompter___*/
 #prompt{
     color: #252422;
-    font-size: 27px;
+    font-size: 40px;
 }
 /* _______________Tutorial popup font size */
 .popup .popuptext {
-        font-size: 12px;
+        font-size: 13px;
+        
          
     }
 
@@ -308,7 +314,8 @@ animation: bun 0.5s forwards ease-in-out;
 
 /*___________Main heading___*/
 .main-heading{
-    font-size: 35px;
+    font-size: 30px;
+
 }
 
 /*_______________Start game Button___*/
@@ -325,7 +332,7 @@ animation: bun 0.5s forwards ease-in-out;
 }
 /*______________Message prompter ___*/
 #prompt{
-    font-size: 20px;
+    font-size: 35px;
 }
 
   /*_____________Game_buttons ______*/
@@ -360,6 +367,8 @@ animation: bun 0.5s forwards ease-in-out;
 /* _______________Tutorial popup font size */
 .popup .popuptext {
         font-size: 9px;
+        right: 50%;
+      
     }
 
 }

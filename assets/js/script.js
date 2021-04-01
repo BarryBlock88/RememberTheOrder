@@ -131,7 +131,7 @@ function gameTurn() {
         computerSequence = false;
         clearBackground();
         on = true;
-        $('#prompt').html("...Now your turn, do you remember!...");
+        $('#prompt').html("...Now your turn, do you remember?...");
     }
     // Asigns the numbers 1-4 to on of the 4 game button tiles
     if (computerSequence == true) {
