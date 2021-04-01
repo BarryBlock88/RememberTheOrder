@@ -2,8 +2,54 @@
 ### Developer/Author - Barry Cullen
  ![DevLogo](assets/wireframes/BarryBlock88.png)
 
-## This project (Milestone Two) was completed as part of Code Institute's Full Stack Web Development course in 2020/21-
+## Table of Contents -
+- [Project Outline:](#project-outline-)
+  * [Remember The Order! - A bakery themed memory game](#remember-the-order----a-bakery-themed-memory-game)
+  * [*UX*](#-ux-)
+      - [Who is the target audience of this site?](#who-is-the-target-audience-of-this-site-)
+    + [User Stories](#user-stories)
+      - [Links to wireframes](#links-to-wireframes)
+      - [Mobile](#mobile)
+      - [Desktop](#desktop)
+    + [Colour design](#colour-design)
+      - [Colour palette :](#colour-palette--)
+    + [Typography](#typography)
+  * [*Features*](#-features-)
+    + [Current Features](#current-features)
+    + [Additional features to add](#additional-features-to-add)
+    + [Technologies Used](#technologies-used)
+      - [Languages Used](#languages-used)
+    + [Frameworks, Libraries & Programs](#frameworks--libraries---programs)
+- [*Testing*](#-testing-)
+    + [***Code validation***](#---code-validation---)
+      - [W3C Markup Validator -](#w3c-markup-validator--)
+      - [W3C CSS Validator -](#w3c-css-validator--)
+      - [Lighthouse report -](#lighthouse-report--)
+    + [User Story testing](#user-story-testing)
+    + [Manual Testing](#manual-testing)
+  * [Responsiveness Testing](#responsiveness-testing)
+      - [Responsiveness](#responsiveness) 
+      - [Phones -](#phones--)
+      - [Tablets -](#tablets--)
+      - [Laptops -](#laptops--)
+  * [*Browser Testing*](#-browser-testing-)
+      - [Issues Found -](#issues-found--)
+      - [Bugs -](#bugs--)
+  * [*Deployment*](#-deployment-)
+    + [Hosting on GitHub Pages](#hosting-on-github-pages)
+- [*Credits*](#-credits-)
+    + [Content](#content)
+    + [Code Snippet Credits](#code-snippet-credits)
+    + [Media](#media)
+    + [Acknowledgements](#acknowledgements)
+        * [Websites/Online services used for the project:](#websites-online-services-used-for-the-project-)
+  * [Received inspiration for this project from:](#received-inspiration-for-this-project-from-)
+      - [Websites, such as  -](#websites--such-as---)
+      - [Tutorial -](#tutorial--)
+  * [*Advice and support*](#-advice-and-support-)
 
+
+## This project (Milestone Two) was completed as part of Code Institute's Full Stack Web Development course in 2020/21-
 ## Project Requirements:
 -To create a Dynamic Front End Project, Write custom JavaScript, HTML and CSS code to create a front-end web application consisting of one or more HTML pages with significant interactive functionality. 
 
@@ -202,10 +248,11 @@ The Website was tested on Firefox, Google Chrome, Microsoft Edge and Safari brow
 #### Issues Found -
 - Had difficuly styling the Pop up window for the tutorial with CSS for smaller screens was a challenge, after some intensive research and hours of trial and error, i got the pop up to work among the highest number of screen sizes i could, as there are now both large and small mobile phones and many varitions of screen size.
 - Bootstrap with customisation was a bit messy at first so i decided to start again with a much simpler layout for the game as well as removing the score /high score areas for the time being as they were not fitting well on smaller screen sizes.
-#### Issues Found & Bugs -
--Many bugs with in the JS, often to do with the time and delays of various functions, this was also solved through hours of trial and error. To which i know have a better understanding of how these milliseconds can interact with each other in the game.
+- The text on the main page did not look good on some devices.
+#### Bugs -
+- Many bugs with in the JS, often to do with the time and delays of various functions, this was also solved through hours of trial and error. To which i know have a better understanding of how these milliseconds can interact with each other in the game.
 - I removed the audio elements when the player/user clicks on the image tiles as this was causing a messy over playing of various elements and in my opinion was affecting the over all user game play experience.
--The text on the main page did not look good on some devices
+- The audio sometimes doesnt play if the Game button tile is repeated in the computer sequence.
 
 
 ## *Deployment*
@@ -232,24 +279,28 @@ The site was developed in GitPod and pushed to the following remote GitHub repos
 ### Content
 
 ### Code Snippet Credits 
-- Gridsystem as part of bootstrap 
+- Grid system as part of bootstrap 4
 - Pop up tooltip from w3 schools(credited in js/css files) which didnt work as i wanted initaly but with alot of fiddling and changing i made it work.
 ### Media
 - The images used are of my own design, using graphic tablet, GIMP and other methods 
-    - ![Cartoon-image-development-design 1](assets/wireframes/original-designs1.jpg) 
-    - ![cartoon-image-development-design 2](assets/wireframes/original-designs2.jpg)
+#### Original drawings of the game
+- [Game-development-design1](assets/wireframes/gameDrawings_1.jpg) 
+- [Game-development-design2](assets/wireframes/gameDrawings_2.jpg)
+- [Game-development-design3](assets/wireframes/gameDrawings_3.jpg)
+- [Game-development-design4](assets/wireframes/gameDrawings_4.jpg)
 
-- The tab icon is also my design
+
 
 ### Acknowledgements
 
 
 ##### Websites/Online services used for the project:
-1. to display the Website on different devices.
- Stack Overflow (https://stackoverflow.com/) used to solve coding doubts during the game application creation process.
+
+1. Stack Overflow (https://stackoverflow.com/) used to solve coding doubts during the game application creation process.
 2. W3school (https://www.w3schools.com) used to solve coding doubts during the game application creation process.
 3. Bootstrap (https://getbootstrap.com/) was used to assist with the Games' responsiveness and styling.
 4. TinyPNG (https://tinypng.com/) to compress file sizes for faster load times.
+5. https://ecotrust-canada.github.io/markdown-toc/  for the table of contents in the README.md file.
 
 
 
