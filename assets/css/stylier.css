@@ -17,6 +17,7 @@ background-color:#EB5E28;
 body, html {
     margin: 0;
     padding: 0;
+    background-color:#EB5E28;
     font-family: 'VT323', monospace;
     background-image: url(../img/costumer_breadpeach.png);
     background-size: 70%;
@@ -209,7 +210,7 @@ animation: bun 0.5s forwards ease-in-out;
 /*_____________________________________________________________________________RESPONISIVENESS____________________*/
 
 
-  @media(max-width: 1024px)  {/*_______________________for laptops___*/
+  @media(max-width: 1024px),(max-width: 1224px)  {/*_______________________for laptops___*/
 /* _______________Tutorial popup size */
     .popup .popuptext {
     font-size: 15px;
@@ -220,7 +221,7 @@ animation: bun 0.5s forwards ease-in-out;
 
 /*________Main heading___*/
 .main-heading{
-    font-size: 35px;
+    font-size: 30px;
 }
 
 /*_________________________Start game Button___*/
@@ -255,13 +256,13 @@ animation: bun 0.5s forwards ease-in-out;
 
      /*______________Main heading___*/
 .main-heading{
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 5px;
 }
 
 /*________________________Start game Button___*/
  .start-game{ 
-     font-size: 24px;
+     font-size: 25px;
  
  }
     /*______________Non-main buttons____*/
@@ -311,7 +312,7 @@ animation: bun 0.5s forwards ease-in-out;
   @media (max-width: 414px){ 
 /* _______________Tutorial popup window size for medium moblie phones */
 .popup .popuptext {
-    font-size: 11px;
+    font-size: 9px;
     height: 60vh;
     right: 50%;
     }
@@ -319,7 +320,7 @@ animation: bun 0.5s forwards ease-in-out;
  @media (max-width: 360px){ 
 /* _______________Tutorial popup window size for medium moblie phones */
 .popup .popuptext {
-    font-size: 11px;
+    font-size: 9px;
     height: 70vh;
     right: 50%;
     }
