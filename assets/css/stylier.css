@@ -12,7 +12,6 @@ body, html {
     background-size: 70%;
     background-repeat: no-repeat;
     position: relative;
-    top: 4%;
     width: 100%;
     overflow:scroll;
     overflow-x:hidden;
@@ -163,6 +162,7 @@ position: relative;
 }
 .popuptext ul{
     list-style-type: none;
+    line-height: 2em;
 }
 /* _____________________Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
@@ -199,11 +199,11 @@ animation: bun 0.5s forwards ease-in-out;
 /*_____________________________________________________________________________RESPONISIVENESS____________________*/
 
 
-  @media(max-width: 801px), (min-width: 1281px)  {/*_______________________for desktops___*/
+  @media(max-width: 900px)  {/*_______________________for laptops___*/
 
 /*________Main heading___*/
 .main-heading{
-    font-size: 45px;
+    font-size: 35px;
 }
 
 /*_________________________Start game Button___*/
@@ -226,25 +226,21 @@ animation: bun 0.5s forwards ease-in-out;
 /* _______________Tutorial popup font size */
 .popup .popuptext {
         font-size: 18px;
-         height: 50vh;
     }
 
 }
-  @media(min-width: 800px),(min-width: 768px){
-/* _______________Tutorial popup font size */
+
+
+
+  @media(max-width: 769px){/*______________for tablets and medium sized devices___*/
 .popup .popuptext {
-        font-size: 16px;
-          height: unset;
+    font-size: 13px;
+    height: 50vh;
     }
-  }
-
-
-  @media(min-width: 414px),(max-width: 768px){/*______________for tablets and medium sized devices___*/
-
 
      /*______________Main heading___*/
 .main-heading{
-    font-size: 40px;
+    font-size: 35px;
     margin-bottom: 5px;
 }
 
@@ -265,16 +261,9 @@ animation: bun 0.5s forwards ease-in-out;
     color: #252422;
     font-size: 40px;
 }
-/* _______________Tutorial popup font size */
-.popup .popuptext {
-        font-size: 13px;
-        
-         
-    }
 
- }
-  @media (min-width: 414px),(max-width: 768px){ /*____________Game_buttons (for tablets screen)______*/
-
+    
+/*____________Game_buttons (for tablets screen)______*/
 
 
 #cinnimon-roll {
@@ -304,9 +293,16 @@ animation: bun 0.5s forwards ease-in-out;
 }
   }
 
+  @media (max-width: 414px){ 
+/* _______________Tutorial popup window size for medium moblie phones */
+.popup .popuptext {
+    font-size: 13px;
+    height: 50vh;
+    }
+  }
 
  
-  @media(max-width: 325px), (max-width: 414px){/*______________________for small mobile devices___*/
+  @media(max-width: 325px), (max-width: 413px){/*______________________for small mobile devices___*/
 
     body, html {
     background-image: unset;
@@ -368,7 +364,7 @@ animation: bun 0.5s forwards ease-in-out;
 .popup .popuptext {
         font-size: 9px;
         right: 50%;
-      
+      height: 70vh;
     }
 
 }
