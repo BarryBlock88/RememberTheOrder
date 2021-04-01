@@ -196,6 +196,9 @@ In the project, no syntax errors were detected, as validated by -
 ![Image-css](assets/testing/Screenshot_2021-04-01W3CCSSValidatorResult.png)
 #### Lighthouse report -
 ![Image-lighthouse-report-screenshot](assets/testing/Screenshot_2021-04-01LighthouseReportViewer.png) 
+#### jshint report -
+I used jshint to discover any errors within the script.js file, there are no errors but only some warnings.
+![Image-css](assets/testing/Screenshot_2021-04-02JSHint.png)
 
 ### User Story testing
 
