@@ -335,8 +335,12 @@ the following projects, websites and tutorials that I learned from to complete m
 - https://www.danpurdy.co.uk/tutorial/simon-says-game-in-jquery-tutorial/
 - https://medium.com/front-end-weekly/create-simon-game-in-javascript-d53b474a7416
 
-#### Tutorial -
-Free Code Camps - Simon Says
+#### Tutorials -
+
+- Live Coding a Simon Game: HTML, CSS, Javascript - Web Dev Junkie
+https://www.youtube.com/watch?v=W0MxUHlZo6U
+
+- Free Code Camps - Simon Says
 https://www.youtube.com/watch?v=n_ec3eowFLQ 
 This video served as my main inspiration for creating my project and acted somewhat as a guide to help me understand how best to create the game and understand the underlining JavaScript elements involved. The javascript structure of the project is based on this video I modified the definitions, sounds, times, functions and and the random number generator i got from w3schools (https://www.w3schools.com/js/js_random.asp) to show a different version other than the one id learned through the video. I watched the video several times over several days following the instructions to replicate the code, I then changed elements. The goal was to learn how to develop a similar game application, understanding and modifing the javascript as i went along, not plagurise the code from this tutorial without any knowledge of how it worked.(In fact several elements did not work for me initaly so I had quite alot of trial and error changing certain functions and booleans to understand the javascript used and to fix bugs that had been generated).
 
