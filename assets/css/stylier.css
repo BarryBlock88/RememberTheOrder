@@ -174,8 +174,12 @@ position: relative;
     width: 70vw;
     right: unset;
 }
+.popuptext ul li:first-child{
+    list-style-type: none;
+   
+}
 .popuptext ul{
-    list-style-type: lower-roman;
+    list-style-type: square;
    
 }
 /* _____________________Toggle this class when clicking on the popup container (hide and show the popup) */
