@@ -24,9 +24,6 @@ let cinRoll = document.getElementById('cinnimon-roll');
 let painAu = document.getElementById('pain-au-chocolat');
 let faCake = document.getElementById('fairy-cake');
 
-//Background body
-let backG = document.getElementById('bg');
-
 // level counter
 let levelCounter = document.getElementById('level');
 
@@ -123,7 +120,7 @@ function playGame() {
 
 //random function--- https://www.w3schools.com/js/js_random.asp ---from w3 schools
 function randomSequence(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)+ min);
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 // computer sequence activation
 function gameTurn() {
@@ -161,7 +158,7 @@ function gameTurn() {
             }
             flash++;
         }, 500);
-         $("#bg").css("background-color", "#403D39");
+        $("#bg").css("background-color", "#403D39");
         $('#prompt').css("color", "#FFFCF2");
     }
 
@@ -203,7 +200,8 @@ function hoverOne() {
     cinRoll.style.backgroundColor = "rgb(100,149,237, 0.5)";
 }
 function hoverTwo() {
-    bread.style.backgroundColor = "rgb(255, 105, 180, 0.5)";}
+    bread.style.backgroundColor = "rgb(255, 105, 180, 0.5)";
+}
 function hoverThree() {
     painAu.style.backgroundColor = "rgb(221, 185, 64, 0.5)";
 }
@@ -252,7 +250,7 @@ cinRoll.addEventListener('click', function () {
         playerSequence.push(1);
         checkAnswer();
         one();
-        
+
         if (!win) {
             setTimeout(function () {
                 clearBackground();
@@ -266,7 +264,7 @@ bread.addEventListener('click', function () {
         playerSequence.push(2);
         checkAnswer();
         two();
-       
+
         if (!win) {
             setTimeout(function () {
                 clearBackground();
@@ -280,7 +278,7 @@ painAu.addEventListener('click', function () {
         playerSequence.push(3);
         checkAnswer();
         three();
-        
+
         if (!win) {
             setTimeout(function () {
                 clearBackground();
@@ -294,7 +292,7 @@ faCake.addEventListener('click', function () {
         playerSequence.push(4);
         checkAnswer();
         four();
-       
+
         if (!win) {
             setTimeout(function () {
                 clearBackground();
@@ -315,8 +313,8 @@ function checkAnswer() {
     playError();
     nextLevel();
 }
-  
-  
+
+
 // Function for when the player enters in the wrong answer to show they've made a mistake
 function playError() {
     if (success == false) {
@@ -358,7 +356,7 @@ function winGame() {
     flashColor();
     $('#winGameModal').modal('show');
     $('#prompt').html("You WON the Game!");
-     winGameAudio.play();
+    winGameAudio.play();
     on = false;
     win = true;
 }

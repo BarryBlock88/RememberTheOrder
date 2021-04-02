@@ -24,7 +24,6 @@ body, html {
     background-repeat: no-repeat;
     position: relative;
     width: 100%;
-    overflow:scroll;
     overflow-x:hidden;
 }
 /*__________________________________________Main game area_____*/
@@ -172,8 +171,8 @@ position: relative;
     right: unset;
 }
 .popuptext ul{
-    list-style-type: none;
-    line-height: 2em;
+    list-style-type: lower-roman;
+   
 }
 /* _____________________Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
@@ -239,7 +238,7 @@ animation: bun 0.5s forwards ease-in-out;
 /*__________________Message prompter___*/
 #prompt{
     padding: 5px;
-    font-size: 45px;
+    font-size: 40px;
 }
 
 }
@@ -275,7 +274,7 @@ animation: bun 0.5s forwards ease-in-out;
 /*_____________Message prompter___*/
 #prompt{
     color: #252422;
-    font-size: 40px;
+    font-size: 35px;
 }
 
     
@@ -312,15 +311,15 @@ animation: bun 0.5s forwards ease-in-out;
   @media (max-width: 414px){ 
 /* _______________Tutorial popup window size for medium moblie phones */
 .popup .popuptext {
-    font-size: 9px;
-    height: 60vh;
+    font-size: 10px;
+    height: 70vh;
     right: 50%;
     }
   }
  @media (max-width: 360px){ 
 /* _______________Tutorial popup window size for medium moblie phones */
 .popup .popuptext {
-    font-size: 9px;
+    font-size: 10px;
     height: 70vh;
     right: 50%;
     }
@@ -352,7 +351,7 @@ animation: bun 0.5s forwards ease-in-out;
 }
 /*______________Message prompter ___*/
 #prompt{
-    font-size: 35px;
+    font-size: 30px;
 }
 
   /*_____________Game_buttons ______*/
@@ -388,7 +387,7 @@ animation: bun 0.5s forwards ease-in-out;
 .popup .popuptext {
         font-size: 9px;
         right: 50%;
-      height: 70vh;
+      height: 80vh;
     }
 
 }

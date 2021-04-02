@@ -55,6 +55,7 @@
 
 
 # Project Outline:
+![Game-image](assets/img/bread_boss1.png)
 ## Remember The Order! - A bakery themed memory game 
 
 
@@ -243,23 +244,20 @@ The Website was viewed on devices such as Desktop, Laptop, Huawei Y6, iPhone 5/6
 ### *Using inspect elements on firefox i checked responsiveness for the following*
 #### Phones -
 Galaxy Note 3Android 4.3
-Galaxy Note 9Android 7.0
 Galaxy S5Android 5.0
 Galaxy S9/S9+Android 7.0
 iPhone 5/SEiOS 10.3.1
 iPhone 6/7/8iOS 11
 iPhone 6/7/8 PlusiOS 11
 iPhone XS MaxiOS 12
-LG Optimus L70Android 4.4.2
-Nokia 8110 4G
+
 #### Tablets -
 iPad
 iPad Mini
-iPad Pro (10.5-inch)
 Kindle Fire HDXLinux
 #### Laptops -
-Laptop with HiDPI screen
-Laptop with MDPI screen
+Laptop Acer Aspire 1
+
 
 ## *Browser Testing*
 The Website was tested on Firefox, Google Chrome, Microsoft Edge and Safari browsers. 
