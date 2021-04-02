@@ -14,6 +14,10 @@ background-color:#EB5E28;
     font-size: 45px;
 }
 
+body{
+    overflow-x:hidden;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -24,7 +28,7 @@ body, html {
     background-repeat: no-repeat;
     position: relative;
     width: 100%;
-    overflow-x:hidden;
+    overflow-y: visible;
 }
 /*__________________________________________Main game area_____*/
 

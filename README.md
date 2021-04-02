@@ -239,7 +239,13 @@ I used jshint to discover any errors within the script.js file, there are no err
 
 ## Responsiveness Testing
 #### Responsiveness
-The Website was viewed on devices such as Desktop, Laptop, Huawei Y6, iPhone 5/6, iPhone 7/8, Samsung A1. 
+The Website was viewed on devices in real life such as Desktop, Laptop, Huawei Y6, iPhone 5/6, iPhone 7/8, Samsung A1.
+###### Tested using (https://responsivedesignchecker.com)
+- [Mobile1](assets/testing/resposiveness/Screenshot_2021-04-02_Responsive_Website_Design_Tester_Mobile1.png) 
+- [Mobile2](assets/testing/resposiveness/Screenshot_2021-04-02_Responsive_Website_Design_Tester_Mobile2.png)
+- [Mobile3](assets/testing/resposiveness/Screenshot_2021-04-02_Responsive_Website_Design_Tester_Mobile3.png)
+- [Tablet](assets/testing/resposiveness/Screenshot_2021-04-02_Responsive_Website_Design_Tester_Mobile1.png)
+
 
 ### *Using inspect elements on firefox i checked responsiveness for the following*
 #### Phones -
@@ -317,6 +323,8 @@ The site was developed in GitPod and pushed to the following remote GitHub repos
 3. Bootstrap (https://getbootstrap.com/) was used to assist with the Games' responsiveness and styling.
 4. TinyPNG (https://tinypng.com/) to compress file sizes for faster load times.
 5. https://ecotrust-canada.github.io/markdown-toc/  for the table of contents in the README.md file.
+6. https://icoconvert.com/ for creating the tab icon of the website.
+7. (https://responsivedesignchecker.com) for double checking the responsiveness of the game after already inspecting in Firefox browser.
 
 
 
